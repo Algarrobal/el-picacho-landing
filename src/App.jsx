@@ -48,12 +48,13 @@ export default function ElPicachoLanding() {
   const langToggle = () => setLang(lang === "es" ? "en" : "es");
 
 const images = [
-  'fuente_y_bandera_web.jpg',
-  'cactus_san_pedro_dia_web.jpg',
-  'cactus_san_pedro_dia_2_web.jpg',
-  'estanque_agua_flores_web.jpg',
-  'primerpatio_-_granadas_web.jpg',
-  'plaza_de_la_fuente_web.jpg',
+  'mosaico_01.jpg',
+  'mosaico_02.jpg',
+  'mosaico_03.jpg',
+  'mosaico_04.jpg',
+  'mosaico_05.jpg',
+  'mosaico_06.jpg',
+  'mosaico_07.jpg',
   'mosaico_08.jpg',
   'mosaico_09.jpg',
   'mosaico_10.jpg',
