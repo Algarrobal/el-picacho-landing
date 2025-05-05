@@ -54,7 +54,7 @@ export default function ElPicachoLanding() {
     "cactus_san_pedro_dia_2_web.jpg",
     "estanque_agua_flores_web.jpg",
     "primerpatio_-_granadas_web.jpg",
-    "plaza_de_la_fuente_web.jpg"
+    "plaza_de_la_fuente_web.jpg",
     'mosaico_08.jpg',
     'mosaico_09.jpg',
     'mosaico_10.jpg',
