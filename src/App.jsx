@@ -47,23 +47,22 @@ export default function ElPicachoLanding() {
 
   const langToggle = () => setLang(lang === "es" ? "en" : "es");
 
-  const images = [
-    "hero-fachada-picacho-web.jpg",
-    "fuente_y_bandera_web.jpg",
-    "cactus_san_pedro_dia_web.jpg",
-    "cactus_san_pedro_dia_2_web.jpg",
-    "estanque_agua_flores_web.jpg",
-    "primerpatio_-_granadas_web.jpg",
-    "plaza_de_la_fuente_web.jpg",
-    "mosaico_08.jpg",
-    "mosaico_09.jpg",
-    "mosaico_10.jpg",
-    "mosaico_11.jpg",
-    "mosaico_12.jpg",
-    "mosaico_13.jpg",
-    "mosaico_14.jpg",
-    "mosaico_15.jpg"
-  ];
+const images = [
+  'fuente_y_bandera_web.jpg',
+  'cactus_san_pedro_dia_web.jpg',
+  'cactus_san_pedro_dia_2_web.jpg',
+  'estanque_agua_flores_web.jpg',
+  'primerpatio_-_granadas_web.jpg',
+  'plaza_de_la_fuente_web.jpg',
+  'mosaico_08.jpg',
+  'mosaico_09.jpg',
+  'mosaico_10.jpg',
+  'mosaico_11.jpg',
+  'mosaico_12.jpg',
+  'mosaico_13.jpg',
+  'mosaico_14.jpg',
+  'mosaico_15.jpg'
+];
 
   return (
     <div className="font-sans text-gray-800">
