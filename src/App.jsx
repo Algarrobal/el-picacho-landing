@@ -55,14 +55,14 @@ export default function ElPicachoLanding() {
     "estanque_agua_flores_web.jpg",
     "primerpatio_-_granadas_web.jpg",
     "plaza_de_la_fuente_web.jpg",
-    'mosaico_08.jpg',
-    'mosaico_09.jpg',
-    'mosaico_10.jpg',
-    'mosaico_11.jpg',
-    'mosaico_12.jpg',
-    'mosaico_13.jpg',
-    'mosaico_14.jpg',
-    'mosaico_15.jpg'
+    "mosaico_08.jpg",
+    "mosaico_09.jpg",
+    "mosaico_10.jpg",
+    "mosaico_11.jpg",
+    "mosaico_12.jpg",
+    "mosaico_13.jpg",
+    "mosaico_14.jpg",
+    "mosaico_15.jpg"
   ];
 
   return (
