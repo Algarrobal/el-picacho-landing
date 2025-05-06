@@ -1,5 +1,8 @@
 
 import { useState } from "react";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 export default function ElPicachoLanding() {
   const [lang, setLang] = useState("es");
