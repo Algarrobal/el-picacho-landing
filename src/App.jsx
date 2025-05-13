@@ -75,7 +75,15 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
           </button>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4 z-40">
-          <h1 className="text-4xl md:text-6xl text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
+          <h1 className="text-center text-4xl md:text-6xl text-white font-bold leading-snug mb-4">
+  El Picacho
+  <br />
+  {lang === "es"
+    ? "Historia, Naturaleza y Democracia"
+    : "History, Nature and Democracy"}
+  <br />
+  {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
+</h1>
           <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
         </div>
       </div>
