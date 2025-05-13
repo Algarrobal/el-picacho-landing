@@ -140,7 +140,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
     href="/expresiones"
     className="inline-block px-6 py-2 text-base md:text-lg text-gray-800 border border-gray-800 rounded hover:bg-gray-800 hover:text-white transition"
   >
-    {lang === "es" ? "Explorar Más Rincones del Picacho" : "Explore More Corners of El Picacho"}
+    {lang === "es" ? "Descubre Más Rincones de El Picacho" : "Wander Further into El Picacho"}
   </a>
 </div>
       </section>
