@@ -19,9 +19,9 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
       servicesTitle: "Servicios",
       servicesList: [
-        "Visitas guiadas por el parque botánico",
-        "Recorridos culturales e históricos",
-        "Audio guía (en desarrollo)"
+          "Recorridos culturales e históricos",
+          "Visitas guiadas por el parque botánico",
+          "Sabores de El Picacho"
       ],
       note: "Actualmente no se comercializan productos.",
       footer: "© El Picacho 2025 | Tarija, Bolivia"
@@ -41,9 +41,9 @@ In today’s Bolivia, El Picacho embodies national identity and history—from t
 The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
       servicesTitle: "Services",
       servicesList: [
-        "Guided tours of the botanical park",
-        "Cultural and historical walks",
-        "Audio guide (in development)"
+        "Cultural and historical tours",
+        "Guided walks through the botanical park",
+        "Flavors of El Picacho"
       ],
       note: "Currently no products are for sale.",
       footer: "© El Picacho 2025 | Tarija, Bolivia"
