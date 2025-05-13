@@ -69,16 +69,21 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </div>
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4 z-40">
-          <div className="text-center text-white leading-snug mb-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold">El Picacho</h1>
-            <h2 className="text-2xl md:text-4xl font-medium mt-2">
-              {lang === "es"
-                ? "Historia, Naturaleza y Democracia"
-                : "History, Nature and Democracy"}
-              <br />
-              {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
-            </h2>
-          </div>
+         <div className="text-center text-white leading-snug mb-4">
+  <h1 className="text-5xl md:text-7xl font-extrabold">El Picacho</h1>
+  <h2 className="text-2xl md:text-4xl font-medium mt-2">
+    {lang === "es"
+      ? "Historia, Naturaleza y Democracia"
+      : "History, Nature and Democracy"}
+    <br />
+    {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
+  </h2>
+  <p className="text-base md:text-lg mt-4 text-white/80 max-w-3xl mx-auto">
+    {lang === "es"
+      ? "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir."
+      : "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River."}
+  </p>
+</div>
         </div>
       </div>
 
