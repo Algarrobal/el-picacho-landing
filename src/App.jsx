@@ -87,14 +87,14 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
 
       <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].historyTitle}</h2>
-        <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
+        <p className="text-lg whitespace-pre-line text-[#9b979e]">{t[lang].historyText}</p>
       </section>
 
       <hr className="border-t border-[#16309e]/15" />
 
       <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
-        <p className="text-lg mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
+        <p className="text-lg mb-6 whitespace-pre-line text-[#9b979e]">{t[lang].botanicText}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <img
