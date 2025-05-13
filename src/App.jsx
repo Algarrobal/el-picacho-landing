@@ -90,7 +90,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
       </section>
 
-      <section className="p-8 md:p-16 bg-[#16309e] text-white">
+      <section className="p-8 md:p-16 bg-white text-[#16309e]">
   <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
   <p className="text-lg mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
