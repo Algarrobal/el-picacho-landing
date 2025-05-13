@@ -85,14 +85,14 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </div>
       </div>
 
-      <section className="p-8 md:p-16 bg-white text-[#16309e]">
+      <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].historyTitle}</h2>
         <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
       </section>
 
-      <hr className="border-t border-[#16309e]/15 my-12" />
+      <hr className="border-t border-[#16309e]/15" />
 
-      <section className="p-8 md:p-16 bg-white text-[#16309e]">
+      <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
         <p className="text-lg mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -129,9 +129,9 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </Modal>
       </section>
 
-      <hr className="border-t border-[#16309e]/15 my-12" />
+      <hr className="border-t border-[#16309e]/15" />
 
-      <section className="p-8 md:p-16 bg-white text-[#16309e]">
+      <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
         <ul className="list-disc ml-6 text-lg mb-2">
           {t[lang].servicesList.map((item, idx) => (
