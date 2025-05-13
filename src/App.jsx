@@ -127,23 +127,24 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </Modal>
       </section>
 
-      <section className="p-8 md:p-16 bg-white">
-        <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
-        <ul className="list-disc ml-6 text-lg mb-2">
-          {t[lang].servicesList.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-
-       <div className="text-center mt-10">
-  <a
-    href="/expresiones"
-    className="inline-block px-6 py-2 text-base md:text-lg text-gray-800 border border-gray-800 rounded hover:bg-gray-800 hover:text-white transition"
-  >
-    {lang === "es" ? "Descubre Más Rincones de El Picacho" : "Wander Further into El Picacho"}
-  </a>
-</div>
-      </section>
+      <section className="p-8 md:p-16 bg-white text-[#16309e]">
+  <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
+  <ul className="list-disc ml-6 text-lg mb-2">
+    {t[lang].servicesList.map((item, idx) => (
+      <li key={idx}>{item}</li>
+    ))}
+  </ul>
+  <div className="text-center mt-10">
+    <a
+      href="/expresiones"
+      className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+    >
+      {lang === "es"
+        ? "Explorar Más Rincones de El Picacho"
+        : "Explore More Corners of El Picacho"}
+    </a>
+  </div>
+</section>
 
       <footer className="bg-gray-800 text-white text-center py-6">
         {t[lang].footer}
