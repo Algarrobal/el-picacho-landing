@@ -61,16 +61,19 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
   return (
-    <div className="font-sans text-gray-800">
-      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}>
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-4xl md:text-6xl text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
-          <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
-          <button onClick={langToggle} className="bg-white text-gray-800 px-4 py-2 rounded shadow hover:bg-gray-100">
-            {lang === "es" ? "English" : "Español"}
-          </button>
-        </div>
-      </div>
+    <div className="font-sans text-gray-800"><div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url(...)' }}>
+  <div className="absolute top-4 right-4 z-50">
+    <button
+      onClick={langToggle}
+      className="px-4 py-2 text-white text-sm md:text-base rounded border border-white hover:bg-white hover:text-black transition"
+    >
+      {lang === "es" ? "English" : "Español"}
+    </button>
+  </div>
+  <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
+    ...
+  </div>
+</div>
 
       <section className="p-8 md:p-16 bg-white">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].historyTitle}</h2>
