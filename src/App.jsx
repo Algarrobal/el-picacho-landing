@@ -125,7 +125,6 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
             />
           </div>
         </Modal>
-      </section>
 
       <section className="p-8 md:p-16 bg-white text-[#16309e]">
   <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
