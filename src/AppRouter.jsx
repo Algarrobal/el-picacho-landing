@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import App from "./App";
-import Expresiones from "./pages/Expresiones";
+import Expresiones from "./Expresiones";
 
 export default function AppRouter() {
   return (
