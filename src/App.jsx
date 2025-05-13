@@ -21,7 +21,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       servicesList: [
         "Recorridos culturales e históricos",
         "Visitas guiadas por el parque botánico",
-        "Sabores de El Picacho"
+        "Sabores de El Picacho - Almuerza donde el plato se sirve con historia"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     },
@@ -42,7 +42,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
       servicesList: [
         "Cultural and historical tours",
         "Guided walks through the botanical park",
-        "Flavors of El Picacho"
+        "Flavors of El Picacho - Reserve a country meal at the manor house"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     }
@@ -145,8 +145,8 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
             className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
           >
             {lang === "es"
-              ? "Explorar Más Rincones de El Picacho"
-              : "Explore More Corners of El Picacho"}
+              ? "Descubre Más Rincones de El Picacho"
+              : "Wander Further into El Picacho"}
           </a>
         </div>
       </section>
