@@ -85,7 +85,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </div>
       </div>
 
-      <section className="p-8 md:p-16 bg-white">
+      <section className="p-8 md:p-16 bg-white text-[#5f7aae]">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].historyTitle}</h2>
         <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
       </section>
