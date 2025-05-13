@@ -9,8 +9,6 @@ export default function ElPicachoLanding() {
 
   const t = {
     es: {
-      title: "El Picacho – Historia, Naturaleza y Democracia en el Sur de Bolivia",
-      subtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
       historyTitle: "Un Terruño con Historia",
       historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
 
@@ -19,7 +17,6 @@ La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado
 En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
-      visitTitle: "Información para Visitantes",
       servicesTitle: "Servicios",
       servicesList: [
         "Visitas guiadas por el parque botánico",
@@ -30,8 +27,6 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     },
     en: {
-      title: "El Picacho – Where History, Nature, and Democracy Meet in the South of Bolivia",
-      subtitle: "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River.",
       historyTitle: "A Terruño Steeped in History",
       historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor. In the 21st century, the Paz Zamora family settled in the house, committed to resisting Bolivia’s military coups and to the establishment of democracy. With an ecological vision, they began the creation of the botanical park.
 
@@ -44,7 +39,6 @@ In today’s Bolivia, El Picacho embodies national identity and history—from t
       botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
 
 The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
-      visitTitle: "Visitor Information",
       servicesTitle: "Services",
       servicesList: [
         "Guided tours of the botanical park",
@@ -57,7 +51,6 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
   };
 
   const langToggle = () => setLang(lang === "es" ? "en" : "es");
-
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
   return (
@@ -74,17 +67,18 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
             {lang === "es" ? "English" : "Español"}
           </button>
         </div>
+
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4 z-40">
-          <h1 className="text-center text-4xl md:text-6xl text-white font-bold leading-snug mb-4">
-  El Picacho
-  <br />
-  {lang === "es"
-    ? "Historia, Naturaleza y Democracia"
-    : "History, Nature and Democracy"}
-  <br />
-  {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
-</h1>
-          <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
+          <div className="text-center text-white leading-snug mb-4">
+            <h1 className="text-5xl md:text-7xl font-extrabold">El Picacho</h1>
+            <h2 className="text-2xl md:text-4xl font-medium mt-2">
+              {lang === "es"
+                ? "Historia, Naturaleza y Democracia"
+                : "History, Nature and Democracy"}
+              <br />
+              {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
+            </h2>
+          </div>
         </div>
       </div>
 
