@@ -110,15 +110,6 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </Modal>
       </section>
 
-      <section className="bg-white px-8 py-6 text-center">
-        <a
-          href="/expresiones"
-          className="inline-block text-lg md:text-xl font-medium text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition"
-        >
-          {lang === "es" ? "Explorar Arte y Patrimonio" : "Explore Art & Heritage"}
-        </a>
-      </section>
-
       <section className="p-8 md:p-16 bg-white">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
         <ul className="list-disc ml-6 text-lg mb-2">
@@ -127,6 +118,15 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
           ))}
         </ul>
         <p className="italic text-gray-600">{t[lang].note}</p>
+
+        <div className="text-center mt-10">
+          <a
+            href="/expresiones"
+            className="inline-block text-lg md:text-xl font-medium text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition"
+          >
+            {lang === "es" ? "Explorar Más Rincones del Picacho" : "Explore More Corners of El Picacho"}
+          </a>
+        </div>
       </section>
 
       <footer className="bg-gray-800 text-white text-center py-6">
