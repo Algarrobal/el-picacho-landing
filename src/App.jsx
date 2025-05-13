@@ -99,7 +99,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         key={i}
         src={`/${src}`}
         alt="El Picacho"
-        className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer"
+        className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer border border-white"
         onClick={() => setSelectedImage(src)}
       />
     ))}
