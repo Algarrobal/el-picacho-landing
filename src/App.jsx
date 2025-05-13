@@ -138,14 +138,14 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </ul>
         <p className="italic text-gray-600">{t[lang].note}</p>
 
-        <div className="text-center mt-10">
-          <a
-            href="/expresiones"
-            className="inline-block text-lg md:text-xl font-medium text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition"
-          >
-            {lang === "es" ? "Explorar Más Rincones del Picacho" : "Explore More Corners of El Picacho"}
-          </a>
-        </div>
+       <div className="text-center mt-10">
+  <a
+    href="/expresiones"
+    className="inline-block px-6 py-2 text-base md:text-lg text-gray-800 border border-gray-800 rounded hover:bg-gray-800 hover:text-white transition"
+  >
+    {lang === "es" ? "Explorar Más Rincones del Picacho" : "Explore More Corners of El Picacho"}
+  </a>
+</div>
       </section>
 
       <footer className="bg-gray-800 text-white text-center py-6">
