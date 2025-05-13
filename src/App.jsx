@@ -61,7 +61,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
   return (
-    <div className="font-sans text-gray-800"><div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url(...)' }}>
+    <div className="font-sans text-gray-800"><div className="relative h-screen bg-cover bg-center" style={{ 'url("/hero-fachada-picacho-web.jpg")' }}>
   <div className="absolute top-4 right-4 z-50">
     <button
       onClick={langToggle}
