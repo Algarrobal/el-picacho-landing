@@ -19,9 +19,9 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
       servicesTitle: "Servicios",
       servicesList: [
-          "Recorridos culturales e históricos",
-          "Visitas guiadas por el parque botánico",
-          "Sabores de El Picacho - Reserva un almuerzo en la casona"
+        "Recorridos culturales e históricos",
+        "Visitas guiadas por el parque botánico",
+        "Sabores de El Picacho"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     },
@@ -42,7 +42,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
       servicesList: [
         "Cultural and historical tours",
         "Guided walks through the botanical park",
-        "Flavors of El Picacho - Savor a country meal at the manor house"
+        "Flavors of El Picacho"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     }
@@ -67,21 +67,21 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         </div>
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4 z-40">
-         <div className="text-center text-white leading-snug mb-4">
-  <h1 className="text-5xl md:text-7xl font-extrabold">El Picacho</h1>
-  <h2 className="text-2xl md:text-4xl font-medium mt-2">
-    {lang === "es"
-      ? "Historia, Naturaleza y Democracia"
-      : "History, Nature and Democracy"}
-    <br />
-    {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
-  </h2>
-  <p className="text-base md:text-lg mt-4 text-white/80 max-w-3xl mx-auto">
-    {lang === "es"
-      ? "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir."
-      : "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River."}
-  </p>
-</div>
+          <div className="text-center text-white leading-snug mb-4">
+            <h1 className="text-5xl md:text-7xl font-extrabold">El Picacho</h1>
+            <h2 className="text-2xl md:text-4xl font-medium mt-2">
+              {lang === "es"
+                ? "Historia, Naturaleza y Democracia"
+                : "History, Nature and Democracy"}
+              <br />
+              {lang === "es" ? "en el Sur de Bolivia" : "in the South of Bolivia"}
+            </h2>
+            <p className="text-base md:text-lg mt-4 text-white/80 max-w-3xl mx-auto">
+              {lang === "es"
+                ? "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir."
+                : "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River."}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -90,22 +90,24 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
       </section>
 
+      <hr className="border-t border-[#16309e]/15 my-12" />
+
       <section className="p-8 md:p-16 bg-white text-[#16309e]">
-  <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
-  <p className="text-lg mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    {images.map((src, i) => (
-      <img
-        key={i}
-        src={`/${src}`}
-        alt="El Picacho"
-        className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer border border-white"
-        onClick={() => setSelectedImage(src)}
-      />
-    ))}
-  </div>
-</section> 
-      <Modal
+        <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
+        <p className="text-lg mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {images.map((src, i) => (
+            <img
+              key={i}
+              src={`/${src}`}
+              alt="El Picacho"
+              className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer border border-white"
+              onClick={() => setSelectedImage(src)}
+            />
+          ))}
+        </div>
+
+        <Modal
           isOpen={!!selectedImage}
           onRequestClose={() => setSelectedImage(null)}
           className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
@@ -125,25 +127,29 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
             />
           </div>
         </Modal>
+      </section>
+
+      <hr className="border-t border-[#16309e]/15 my-12" />
 
       <section className="p-8 md:p-16 bg-white text-[#16309e]">
-  <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
-  <ul className="list-disc ml-6 text-lg mb-2">
-    {t[lang].servicesList.map((item, idx) => (
-      <li key={idx}>{item}</li>
-    ))}
-  </ul>
-  <div className="text-center mt-10">
-    <a
-      href="/expresiones"
-      className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
-    >
-      {lang === "es"
-        ? "Explorar Más Rincones de El Picacho"
-        : "Explore More Corners of El Picacho"}
-    </a>
-  </div>
-</section>
+        <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
+        <ul className="list-disc ml-6 text-lg mb-2">
+          {t[lang].servicesList.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
+        </ul>
+
+        <div className="text-center mt-10">
+          <a
+            href="/expresiones"
+            className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+          >
+            {lang === "es"
+              ? "Explorar Más Rincones de El Picacho"
+              : "Explore More Corners of El Picacho"}
+          </a>
+        </div>
+      </section>
 
       <footer className="bg-gray-800 text-white text-center py-6">
         {t[lang].footer}
