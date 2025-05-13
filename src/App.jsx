@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Modal from "react-modal";
 
@@ -10,14 +9,14 @@ export default function ElPicachoLanding() {
 
   const t = {
     es: {
-      title: "El Picacho – Historia, Naturaleza y Democracia en el Corazón de Bolivia",
-      subtitle: "Una casa de 1834 transformada en parque botánico y símbolo democrático.",
-      historyTitle: "Una Casa con Historia",
-      historyText:
-        "El Picacho es una casa republicana construida en 1834, ubicada en Tarija, Bolivia. Desde 1986, es el hogar de Jaime Paz Zamora, expresidente de Bolivia y figura clave en la recuperación de la democracia. En sus patios y jardines, ha cultivado un parque botánico que honra la flora local y la memoria histórica.",
-      botanicTitle: "Refugio Botánico y Patrimonio Cultural",
-      botanicText:
-        "El parque botánico de El Picacho reúne especies emblemáticas como el jazmín del campo, el magnolio y el duraznero histórico. Cada ambiente, como El Campanario o El Huerto Escondido, ofrece una experiencia sensorial única.",
+      title: "El Picacho – Historia, Naturaleza y Democracia en el Sur de Bolivia",
+      subtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
+      historyTitle: "Un Terruño con Historia",
+      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
+
+La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado por el rio, en medio de cuyas aguas surge un peñón en forma de pico que desde siempre el paisanaje lo denominó “El Picacho”, que con el tiempo le dio nombre al lugar. El Picacho es una “Salamanca" nombre que la gente da a los socavones que el agua pule en su seno, y que según mitología popular, es donde habitan los diablos. El asentamiento es de finales de la colonia, a su entrada una fuente de agua en piedra, zaguán con gruesos dinteles de madera de algarrobo, dos patios, capilla, campanario, y molino de dos bocas. Sus paredes son de un blanco luminoso y sus ventanas azul añil. Y cubriendo el conjunto un tejado ocre de tintes anaranjados.`,
+      botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
+      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
       visitTitle: "Información para Visitantes",
       servicesTitle: "Servicios",
       servicesList: [
@@ -29,14 +28,18 @@ export default function ElPicachoLanding() {
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     },
     en: {
-      title: "El Picacho – History, Nature and Democracy at Bolivia’s Heart",
-      subtitle: "A republican house from 1834 turned into a botanical park and democratic symbol.",
-      historyTitle: "A House with History",
-      historyText:
-        "El Picacho is a republican house built in 1834, located in Tarija, Bolivia. Since 1986, it has been the residence of Jaime Paz Zamora, former President of Bolivia and key figure in the country’s democratic transition. In its gardens, he has created a living botanical park that honors local flora and historical memory.",
-      botanicTitle: "Botanical Refuge and Cultural Heritage",
-      botanicText:
-        "El Picacho’s botanical park includes emblematic species like jasmine of the field, magnolia, and a historic peach tree. Spaces such as El Campanario and El Huerto Escondido offer unique sensory experiences.",
+      title: "El Picacho – Where History, Nature, and Democracy Meet in the South of Bolivia",
+      subtitle: "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River.",
+      historyTitle: "A Terruño Steeped in History",
+      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor. In the 21st century, the Paz Zamora family settled in the house, committed to resisting Bolivia’s military coups and to the establishment of democracy. With an ecological vision, they began the creation of the botanical park.
+
+The manor, surrounded by cypresses, stands atop a gorge carved by the river. In the middle of its waters rises a rock shaped like a beak, which locals have long called “El Picacho.” Over time, the name came to designate the entire place. El Picacho is a Salamanca—a name given to the caves smoothed by water, believed in popular mythology to be dwellings of the devil.
+
+The settlement dates to the late colonial period. At its entrance, there is a stone fountain, a hallway with heavy carob wood lintels, two courtyards, a chapel, a bell tower, and a twin-mouth mill. Its walls are a luminous white, its windows deep indigo blue, and the whole structure is covered by an ochre-tiled roof tinged with orange.`,
+      botanicTitle: "Botanical Park: A Living Unity in Diversity",
+      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
+
+The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
       visitTitle: "Visitor Information",
       servicesTitle: "Services",
       servicesList: [
@@ -51,23 +54,7 @@ export default function ElPicachoLanding() {
 
   const langToggle = () => setLang(lang === "es" ? "en" : "es");
 
-const images = [
-  'mosaico_01.jpg',
-  'mosaico_02.jpg',
-  'mosaico_03.jpg',
-  'mosaico_04.jpg',
-  'mosaico_05.jpg',
-  'mosaico_06.jpg',
-  'mosaico_07.jpg',
-  'mosaico_08.jpg',
-  'mosaico_09.jpg',
-  'mosaico_10.jpg',
-  'mosaico_11.jpg',
-  'mosaico_12.jpg',
-  'mosaico_13.jpg',
-  'mosaico_14.jpg',
-  'mosaico_15.jpg'
-];
+  const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
   return (
     <div className="font-sans text-gray-800">
@@ -83,45 +70,53 @@ const images = [
 
       <section className="p-8 md:p-16 bg-white">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].historyTitle}</h2>
-        <p className="text-lg max-w-3xl">{t[lang].historyText}</p>
+        <p className="text-lg max-w-3xl whitespace-pre-line">{t[lang].historyText}</p>
       </section>
 
       <section className="p-8 md:p-16 bg-gray-50">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].botanicTitle}</h2>
-        <p className="text-lg max-w-3xl mb-6">{t[lang].botanicText}</p>
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-  {images.map((src, i) => (
-    <img
-      key={i}
-      src={`/${src}`}
-      alt="El Picacho"
-      className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer"
-      onClick={() => setSelectedImage(src)}
-    />
-  ))}
-</div>
+        <p className="text-lg max-w-3xl mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {images.map((src, i) => (
+            <img
+              key={i}
+              src={`/${src}`}
+              alt="El Picacho"
+              className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer"
+              onClick={() => setSelectedImage(src)}
+            />
+          ))}
+        </div>
 
-<Modal
-  isOpen={!!selectedImage}
-  onRequestClose={() => setSelectedImage(null)}
-  className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
-  overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
->
-  <div className="relative">
-    <button
-      onClick={() => setSelectedImage(null)}
-      className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
-    >
-      ×
-    </button>
-    <img
-      src={`/${selectedImage}`}
-      alt="Zoomed El Picacho"
-      className="max-h-screen max-w-full rounded-lg shadow-xl"
-    />
-  </div>
-</Modal>
-        
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+        >
+          <div className="relative">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
+            >
+              ×
+            </button>
+            <img
+              src={`/${selectedImage}`}
+              alt="Zoomed El Picacho"
+              className="max-h-screen max-w-full rounded-lg shadow-xl"
+            />
+          </div>
+        </Modal>
+      </section>
+
+      <section className="bg-white px-8 py-6 text-center">
+        <a
+          href="/expresiones"
+          className="inline-block text-lg md:text-xl font-medium text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition"
+        >
+          {lang === "es" ? "Explorar Arte y Patrimonio" : "Explore Art & Heritage"}
+        </a>
       </section>
 
       <section className="p-8 md:p-16 bg-white">
