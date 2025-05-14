@@ -17,7 +17,7 @@ La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado
 En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
-      servicesTitle: "Servicios",
+      servicesTitle: "Planifica Tu Picacheada",
       servicesList: [
         "Recorridos culturales e históricos",
         "Visitas guiadas por el parque botánico",
@@ -38,7 +38,7 @@ In today’s Bolivia, El Picacho embodies national identity and history—from t
       botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
 
 The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
-      servicesTitle: "Services",
+      servicesTitle: "Arrange Your Visit",
       servicesList: [
         "Cultural and historical tours",
         "Guided walks through the botanical park",
@@ -138,6 +138,9 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
             <li key={idx}>{item}</li>
           ))}
         </ul>
+
+        {/* Separator line before button */}
+        <hr className="border-t border-[#16309e]/15 my-10" />
 
         <div className="text-center mt-10">
           <a
