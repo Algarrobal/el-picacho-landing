@@ -17,7 +17,7 @@ La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado
 En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
-      servicesTitle: "Planifica Tu Picacheada",
+      servicesTitle: "Planifica Tu Visita",
       servicesList: [
         "Recorridos culturales e históricos",
         "Visitas guiadas por el parque botánico",
@@ -134,10 +134,14 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
       <section className="p-8 md:p-16 bg-white text-[#16309e] mb-12">
         <h2 className="text-3xl font-semibold mb-4">{t[lang].servicesTitle}</h2>
         <ul className="list-disc ml-6 text-lg mb-2">
-          {t[lang].servicesList.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
+  {t[lang].servicesList.map((item, idx) => (
+    <li key={idx}>
+      <a href="/picacheada" className="hover:underline hover:text-[#16309e] transition">
+        {item}
+      </a>
+    </li>
+  ))}
+</ul>
 
         {/* Separator line before button */}
         <hr className="border-t border-[#16309e]/15 my-10" />
