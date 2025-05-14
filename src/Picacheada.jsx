@@ -5,7 +5,7 @@ export default function Picacheada() {
 
   const t = {
     es: {
-      title: "Planifica Tu Picacheada",
+      title: "Planifica Tu Visita",
       toggle: "English",
       sections: [
         {
@@ -57,7 +57,9 @@ export default function Picacheada() {
   return (
     <div className="font-sans min-h-screen bg-white text-gray-800 p-6 md:p-16">
       <div className="flex justify-between items-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold">{t[lang].title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#16309e]">
+          {t[lang].title}
+        </h1>
         <button
           onClick={() => setLang(lang === "es" ? "en" : "es")}
           className="bg-transparent text-sm md:text-base border border-gray-800 px-4 py-2 rounded hover:bg-gray-100"
@@ -71,11 +73,14 @@ export default function Picacheada() {
           key={i}
           className="mb-20 flex flex-col md:flex-row gap-8 items-center"
         >
-          <img
-            src={section.image}
-            alt={section.title}
-            className="w-full md:w-1/2 rounded-lg shadow-lg border border-white"
-          />
+          {section.image && (
+            <img
+              src={section.image}
+              alt={section.title}
+              className="w-full md:w-1/2 rounded-lg shadow-lg border border-white"
+              onError={(e) => (e.target.style.display = "none")}
+            />
+          )}
           <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold mb-3 text-[#16309e]">
               {section.title}
