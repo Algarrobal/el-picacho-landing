@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ElPicachoLanding from "./App";
+import AppRouter from "./AppRouter";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ElPicachoLanding />
+    <AppRouter />
   </React.StrictMode>
 );
