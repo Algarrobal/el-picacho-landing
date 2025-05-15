@@ -87,18 +87,13 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
           <a href="#visita" className="hover:border-b-2 border-current pb-1">Visítanos</a>
           <a href="/expresiones" className="hover:border-b-2 border-current pb-1">Rincones</a>
           <a href="/picacheada" className="hover:border-b-2 border-current pb-1">Reservas</a>
-        </nav>
-
-        <div className="absolute top-16 right-6 z-50">
           <button
             onClick={langToggle}
-            className={`px-4 py-1 border text-sm rounded transition ${
-              scrolled ? 'text-[#16309e] border-[#16309e]' : 'text-white border-white'
-            } hover:bg-[#16309e] hover:text-white`}
+            className="px-3 py-1 border text-sm rounded hover:bg-[#16309e] hover:text-white transition"
           >
             {lang === "es" ? "English" : "Español"}
           </button>
-        </div>
+        </nav>
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
           <h1 className="text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
@@ -152,7 +147,9 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].servicesTitle}</h2>
         <ul className="list-disc ml-6 text-lg mb-2 text-[#3e484a]">
           {t[lang].servicesList.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx}>
+              <a href="/picacheada" className="hover:underline">{item}</a>
+            </li>
           ))}
         </ul>
 
