@@ -1,173 +1,106 @@
-import { useEffect, useState } from "react";
-import Modal from "react-modal";
+import { useState } from "react";
 
-Modal.setAppElement("#root");
-
-export default function ElPicachoLanding() {
+export default function Picacheada() {
   const [lang, setLang] = useState("es");
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 100);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const t = {
     es: {
-      title: (
-        <>
-          <span className="block text-5xl md:text-6xl">El Picacho</span>
-          <span className="block text-2xl md:text-3xl mt-2">Historia, Naturaleza y Democracia</span>
-          <span className="block text-xl md:text-2xl">en el Sur de Bolivia</span>
-        </>
-      ),
-      subtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
-      historyTitle: "Un Terruño con Historia",
-      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
+      title: "Planifica Tu Visita",
+      toggle: "English",
+      sections: [
+        {
+          title: "Recorridos culturales e históricos",
+          text: `Conoce El Picacho comenzando por el portal anunciado en piedra, siguiendo el paseo de la Verbena hasta la plazoleta de la fuente, flanqueada por la capilla. Desde allí, verás ahí cerca el río Guadalquivir, en cuyas aguas se alza el rocoso Picacho, junto al camposanto familiar.
 
-La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado por el río, en medio de cuyas aguas surge un peñón en forma de pico que desde siempre el paisanaje lo denominó “El Picacho”, que con el tiempo le dio nombre al lugar. El Picacho es una “Salamanca" nombre que la gente da a los socavones que el agua pule en su seno, y que según mitología popular, es donde habitan los diablos. El asentamiento es de finales de la colonia, a su entrada una fuente de agua en piedra, zaguán con gruesos dinteles de madera de algarrobo, dos patios, capilla, campanario, y molino de dos bocas. Sus paredes son de un blanco luminoso y sus ventanas azul añil. Y cubriendo el conjunto un tejado ocre de tintes anaranjados.
+Luego explorarás la antigua casona con sus dos patios y diversos ambientes: la pinacoteca, la sala paleontológica y arqueológica, y, en lo alto, la oficina del presidente. Del antiguo horno de don Honorio en el segundo patio, pasarás al Huerto Escondido, y de allí a la Santa Cruz de Lajas, donde podrás degustar un refresco del lugar mientras aprecias, desde el mirador, el paisaje de las nacientes del Guadalquivir.
 
-En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
-      botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
-      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta última es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
-      servicesTitle: "Planifica Tu Visita",
-      servicesList: [
-        "Recorridos culturales e históricos",
-        "Visitas guiadas por el parque botánico",
-        "Sabores de El Picacho - Almuerza donde el plato se sirve con historia"
-      ],
-      footer: "© El Picacho 2025 | Tarija, Bolivia"
+*Si desea incluir una degustación de repostería local o salteñas durante el recorrido por favor indicar en reserva.`,
+          image: "/picacheada_historia.jpg",
+          button: "Reservar Recorrido"
+        },
+        {
+          title: "Visitas guiadas por el parque botánico",
+          text: `Descubre la riqueza del botánico que rodea el conjunto de El Picacho. Conocerás sus distintas especies entre ellas los milenarios ginkgo bilobas, liquidámbares, araucarias, y los así llamados árboles de Júpiter, coníferas del parque imperial japonés, alcanfores, y laureles del jardín del Vaticano, que cohabitan con nuestros emblemáticos molles, churquis, y algarrobos. Cruzando el río tendrás la experiencia de un paseo en montaña del monte originario preservado de la región. En el recorrido te sorprenderán las instalaciones de Land Art las cuales podrás apreciar saboreando un refresco natural del lugar.
+
+*Si desea incluir una degustación de repostería local o salteñas durante el recorrido por favor indicar en reserva.`,
+          image: "/picacheada_botanico.jpg",
+          button: "Reservar Visita"
+        },
+        {
+          title: "Sabores de El Picacho",
+          text: `Almuerza donde el plato se sirve con historia. En el comedor de la casona se ofrecen menús locales con ingredientes del huerto, en un entorno íntimo y natural.`,
+          image: "/picacheada_sabores.jpg",
+          button: "Reservar Almuerzo"
+        }
+      ]
     },
     en: {
-      title: (
-        <>
-          <span className="block text-5xl md:text-6xl">El Picacho</span>
-          <span className="block text-2xl md:text-3xl mt-2">Where History, Nature and Democracy Meet</span>
-          <span className="block text-xl md:text-2xl">in the South of Bolivia</span>
-        </>
-      ),
-      subtitle: "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River.",
-      historyTitle: "A Terruño Steeped in History",
-      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor. In the 21st century, the Paz Zamora family settled in the house, committed to resisting Bolivia’s military coups and to the establishment of democracy. With an ecological vision, they began the creation of the botanical park.
+      title: "Arrange Your Visit",
+      toggle: "Español",
+      sections: [
+        {
+          title: "Cultural and historical tours",
+          text: `Start your visit at El Picacho with the stone-marked entrance and stroll down the Verbena Walk to the plaza by the fountain, flanked by the chapel. From there, you’ll see the Guadalquivir River, where the rocky outcrop known as El Picacho rises beside the family memorial grounds.
 
-The manor, surrounded by cypresses, stands atop a gorge carved by the river. In the middle of its waters rises a rock shaped like a beak, which locals have long called “El Picacho.” Over time, the name came to designate the entire place. El Picacho is a Salamanca—a name given to the caves smoothed by water, believed in popular mythology to be dwellings of the devil.
+Continue through the manor’s courtyards and rooms—the art gallery, the paleontology and archaeology exhibits, and the President’s office above. Then pass by the old oven in the second courtyard to the Hidden Garden, and on to the Santa Cruz de Lajas, where you’ll enjoy a natural refreshment while admiring the source valley of the Guadalquivir.
 
-The settlement dates to the late colonial period. At its entrance, there is a stone fountain, a hallway with heavy carob wood lintels, two courtyards, a chapel, a bell tower, and a twin-mouth mill. Its walls are a luminous white, its windows deep indigo blue, and the whole structure is covered by an ochre-tiled roof tinged with orange.
+*If you’d like to include local pastries or salteñas as part of the experience, please mention this when booking.`,
+          image: "/picacheada_historia.jpg",
+          button: "Book Tour"
+        },
+        {
+          title: "Guided walks through the botanical park",
+          text: `Wander through the rich botanical world surrounding El Picacho. You’ll see ancient ginkgo bilobas, liquidambars, araucarias, and Jupiter trees—imperial Japanese conifers—alongside camphors and laurels from the Vatican gardens. These live in harmony with emblematic trees of the region like molles, churquis, and algarrobos.
 
-In today’s Bolivia, El Picacho embodies national identity and history—from the colonial period, through independence and the republic, to the ongoing construction of democracy.`,
-      botanicTitle: "Botanical Park: A Living Unity in Diversity",
-      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
+Across the river, the trail leads into preserved native woodland. Along the way, discover Land Art installations inspired by the landscape—best appreciated with a fresh drink made onsite.
 
-The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
-      servicesTitle: "Arrange Your Visit",
-      servicesList: [
-        "Cultural and historical tours",
-        "Guided walks through the botanical park",
-        "Flavors of El Picacho - Reserve a country meal at the manor house"
-      ],
-      footer: "© El Picacho 2025 | Tarija, Bolivia"
+*If you’d like to include local pastries or salteñas as part of the experience, please mention this when booking.`,
+          image: "/picacheada_botanico.jpg",
+          button: "Book Walk"
+        },
+        {
+          title: "Flavors of El Picacho",
+          text: `Dine where each plate is served with a story. Local seasonal menus are prepared with ingredients from the garden and served in the manor’s quiet and intimate dining room.`,
+          image: "/picacheada_sabores.jpg",
+          button: "Book Lunch"
+        }
+      ]
     }
   };
 
-  const langToggle = () => setLang(lang === "es" ? "en" : "es");
-  const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
-
   return (
-    <div className="font-sans text-gray-800">
-      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}>
-        <div className={`absolute top-6 left-6 z-50 font-bold text-lg transition-colors ${scrolled ? 'text-[#16309e]' : 'text-white'}`}>
-          El Picacho
-        </div>
-
-        <nav className={`absolute top-6 right-6 z-50 hidden md:flex gap-6 text-sm md:text-base transition-colors ${scrolled ? 'text-[#16309e]' : 'text-white'}`}>
-          <a href="#historia" className="hover:border-b-2 border-current pb-1">Historia</a>
-          <a href="#botanico" className="hover:border-b-2 border-current pb-1">Botánico</a>
-          <a href="#visita" className="hover:border-b-2 border-current pb-1">Visítanos</a>
-          <a href="/expresiones" className="hover:border-b-2 border-current pb-1">Rincones</a>
-          <a href="/picacheada" className="hover:border-b-2 border-current pb-1">Reservas</a>
-          <button
-            onClick={langToggle}
-            className="px-3 py-1 border text-sm rounded hover:bg-[#16309e] hover:text-white transition"
-          >
-            {lang === "es" ? "English" : "Español"}
-          </button>
-        </nav>
-
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
-          <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
-        </div>
+    <div className="font-sans min-h-screen bg-white text-gray-800 p-6 md:p-16">
+      <div className="flex justify-between items-center mb-12">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#16309e]">{t[lang].title}</h1>
+        <button
+          onClick={() => setLang(lang === "es" ? "en" : "es")}
+          className="bg-transparent text-sm md:text-base border border-[#16309e] px-4 py-2 rounded hover:bg-[#16309e] hover:text-white transition"
+        >
+          {t[lang].toggle}
+        </button>
       </div>
 
-      <section id="historia" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].historyTitle}</h2>
-        <p className="text-lg text-[#3e484a] whitespace-pre-line">{t[lang].historyText}</p>
-      </section>
-
-      <section id="botanico" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].botanicTitle}</h2>
-        <p className="text-lg text-[#3e484a] mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((src, i) => (
-            <img
-              key={i}
-              src={`/${src}`}
-              alt="El Picacho"
-              className="rounded-lg shadow-md object-cover w-full h-64 border border-white"
-              onClick={() => setSelectedImage(src)}
-            />
-          ))}
-        </div>
-
-        <Modal
-          isOpen={!!selectedImage}
-          onRequestClose={() => setSelectedImage(null)}
-          className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+      {t[lang].sections.map((section, i) => (
+        <div
+          key={i}
+          className="mb-20 flex flex-col md:flex-row gap-8 items-center"
         >
-          <div className="relative">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
-            >
-              ×
+          <img
+            src={section.image}
+            alt={section.title}
+            className="w-full md:w-1/2 rounded-lg shadow-lg border border-white"
+          />
+          <div className="md:w-1/2">
+            <h2 className="text-2xl font-semibold mb-3 text-[#16309e]">
+              {section.title}
+            </h2>
+            <p className="text-lg mb-4 text-[#3e484a] whitespace-pre-line">{section.text}</p>
+            <button className="px-6 py-2 text-base text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition">
+              {section.button}
             </button>
-            <img
-              src={`/${selectedImage}`}
-              alt="Zoomed El Picacho"
-              className="max-h-screen max-w-full rounded-lg shadow-xl"
-            />
           </div>
-        </Modal>
-      </section>
-
-      <section id="visita" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].servicesTitle}</h2>
-        <ul className="list-disc ml-6 text-lg mb-2 text-[#3e484a]">
-          {t[lang].servicesList.map((item, idx) => (
-            <li key={idx}>
-              <a href="/picacheada" className="hover:underline">{item}</a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="text-center mt-10 border-t border-[#16309e]/15 pt-10">
-          <a
-            href="/picacheada"
-            className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
-          >
-            {lang === "es"
-              ? "Descubre Más Rincones de El Picacho"
-              : "Wander Further into El Picacho"}
-          </a>
         </div>
-      </section>
-
-      <footer className="bg-gray-800 text-white text-center py-6">
-        {t[lang].footer}
-      </footer>
+      ))}
     </div>
   );
 }
