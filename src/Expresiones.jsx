@@ -7,6 +7,7 @@ export default function Expresiones() {
     es: {
       title: "Expresiones de El Picacho",
       toggle: "English",
+      back: "← Volver al Inicio",
       nav: [
         "Land Art, naturaleza y arte",
         "La Pinacoteca Familiar",
@@ -19,7 +20,6 @@ export default function Expresiones() {
           id: "land-art",
           title: "Land Art, naturaleza y arte",
           text: `En el Picacho se desarrolla la disciplina artística de “Land Art”, tanto en su expresión paisajista articulada al parque botánico cuanto a la práctica de las “instalaciones”. Estas están inspiradas en piedras del río y troncos del bosque. En el conjunto hay una remembranza de la pintura negra de Goya, un Fernando Botero del lugar, un torso de Marina Núñez del Prado, un “Origen del Mundo” de Gustav Courbet en piedra lamida por las aguas, y al pie del campanario, un homenaje en piedra negra sobre piedra blanca al gran poeta latinoamericano César Vallejo, entre otras instalaciones...`
-
         },
         {
           id: "pinacoteca",
@@ -46,6 +46,7 @@ export default function Expresiones() {
     en: {
       title: "Expressions of El Picacho",
       toggle: "Español",
+      back: "← Back to Landing Page",
       nav: [
         "Land Art, Nature and Art",
         "The Family Art Gallery",
@@ -102,7 +103,10 @@ export default function Expresiones() {
       <ul className="flex flex-wrap justify-center gap-6 mb-12">
         {t[lang].sections.map((section, idx) => (
           <li key={idx}>
-            <a href={`#${section.id}`} className="text-[#16309e] hover:underline">
+            <a
+              href={`#${section.id}`}
+              className="text-[#16309e] hover:border-b-2 hover:border-[#16309e] pb-1 transition"
+            >
               {t[lang].nav[idx]}
             </a>
           </li>
@@ -120,6 +124,15 @@ export default function Expresiones() {
           </div>
         </div>
       ))}
+
+      <div className="text-center mt-16">
+        <a
+          href="/"
+          className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+        >
+          {t[lang].back}
+        </a>
+      </div>
     </div>
   );
 }
