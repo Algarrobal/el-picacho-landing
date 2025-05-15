@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
@@ -6,6 +6,15 @@ Modal.setAppElement("#root");
 export default function ElPicachoLanding() {
   const [lang, setLang] = useState("es");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const t = {
     es: {
@@ -18,13 +27,9 @@ export default function ElPicachoLanding() {
       ),
       subtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
       historyTitle: "Un Terruño con Historia",
-      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
-
-La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado por el rio, en medio de cuyas aguas surge un peñón en forma de pico que desde siempre el paisanaje lo denominó “El Picacho”, que con el tiempo le dio nombre al lugar. El Picacho es una “Salamanca" nombre que la gente da a los socavones que el agua pule en su seno, y que según mitología popular, es donde habitan los diablos. El asentamiento es de finales de la colonia, a su entrada una fuente de agua en piedra, zaguán con gruesos dinteles de madera de algarrobo, dos patios, capilla, campanario, y molino de dos bocas. Sus paredes son de un blanco luminoso y sus ventanas azul añil. Y cubriendo el conjunto un tejado ocre de tintes anaranjados.
-
-En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
+      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez [...]`,
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
-      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
+      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias [...]`,
       servicesTitle: "Planifica Tu Visita",
       servicesList: [
         "Recorridos culturales e históricos",
@@ -43,17 +48,9 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       ),
       subtitle: "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River.",
       historyTitle: "A Terruño Steeped in History",
-      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor. In the 21st century, the Paz Zamora family settled in the house, committed to resisting Bolivia’s military coups and to the establishment of democracy. With an ecological vision, they began the creation of the botanical park.
-
-The manor, surrounded by cypresses, stands atop a gorge carved by the river. In the middle of its waters rises a rock shaped like a beak, which locals have long called “El Picacho.” Over time, the name came to designate the entire place. El Picacho is a Salamanca—a name given to the caves smoothed by water, believed in popular mythology to be dwellings of the devil.
-
-The settlement dates to the late colonial period. At its entrance, there is a stone fountain, a hallway with heavy carob wood lintels, two courtyards, a chapel, a bell tower, and a twin-mouth mill. Its walls are a luminous white, its windows deep indigo blue, and the whole structure is covered by an ochre-tiled roof tinged with orange.
-
-In today’s Bolivia, El Picacho embodies national identity and history—from the colonial period, through independence and the republic, to the ongoing construction of democracy.`,
+      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez [...]`,
       botanicTitle: "Botanical Park: A Living Unity in Diversity",
-      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
-
-The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
+      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant [...]`,
       servicesTitle: "Arrange Your Visit",
       servicesList: [
         "Cultural and historical tours",
@@ -65,31 +62,27 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
   };
 
   const langToggle = () => setLang(lang === "es" ? "en" : "es");
-
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
   return (
     <div className="font-sans text-gray-800">
-      {/* Sticky Navigation */}
-      <header className="bg-white fixed top-0 left-0 w-full shadow z-50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-          <a href="/" className="text-[#16309e] font-bold text-lg">El Picacho</a>
-          <nav className="hidden md:flex gap-6 text-sm md:text-base text-[#16309e]">
-            <a href="#historia" className="hover:border-b-2 border-[#16309e] pb-1">Historia</a>
-            <a href="#botanico" className="hover:border-b-2 border-[#16309e] pb-1">Botánico</a>
-            <a href="#visita" className="hover:border-b-2 border-[#16309e] pb-1">Visítanos</a>
-            <a href="/expresiones" className="hover:border-b-2 border-[#16309e] pb-1">Rincones</a>
-            <a href="/picacheada" className="hover:border-b-2 border-[#16309e] pb-1">Reservas</a>
-          </nav>
-        </div>
-      </header>
-      <div className="h-16" /> {/* Spacer for sticky nav */}
-
-      {/* Hero Section */}
+      {/* Logo and Nav inside Hero */}
       <div
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
       >
+        <div className={`absolute top-6 left-6 z-50 font-bold text-lg transition-colors ${scrolled ? 'text-[#16309e]' : 'text-white'}`}>
+          El Picacho
+        </div>
+
+        <nav className={`absolute top-6 right-6 z-50 hidden md:flex gap-6 text-sm md:text-base transition-colors ${scrolled ? 'text-[#16309e]' : 'text-white'}`}>
+          <a href="#historia" className="hover:border-b-2 border-current pb-1">Historia</a>
+          <a href="#botanico" className="hover:border-b-2 border-current pb-1">Botánico</a>
+          <a href="#visita" className="hover:border-b-2 border-current pb-1">Visítanos</a>
+          <a href="/expresiones" className="hover:border-b-2 border-current pb-1">Rincones</a>
+          <a href="/picacheada" className="hover:border-b-2 border-current pb-1">Reservas</a>
+        </nav>
+
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
           <h1 className="text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
           <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
@@ -124,7 +117,6 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
           ))}
         </div>
 
-        {/* Modal for Lightbox */}
         <Modal
           isOpen={!!selectedImage}
           onRequestClose={() => setSelectedImage(null)}
@@ -156,7 +148,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
           ))}
         </ul>
 
-        {/* Bottom Button */}
+        {/* CTA Button */}
         <div className="text-center mt-10 border-t border-[#16309e]/15 pt-10">
           <a
             href="/picacheada"
