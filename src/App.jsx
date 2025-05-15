@@ -9,9 +9,7 @@ export default function ElPicachoLanding() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,9 +25,13 @@ export default function ElPicachoLanding() {
       ),
       subtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
       historyTitle: "Un Terruño con Historia",
-      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez [...]`,
+      historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
+
+La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado por el río, en medio de cuyas aguas surge un peñón en forma de pico que desde siempre el paisanaje lo denominó “El Picacho”, que con el tiempo le dio nombre al lugar. El Picacho es una “Salamanca" nombre que la gente da a los socavones que el agua pule en su seno, y que según mitología popular, es donde habitan los diablos. El asentamiento es de finales de la colonia, a su entrada una fuente de agua en piedra, zaguán con gruesos dinteles de madera de algarrobo, dos patios, capilla, campanario, y molino de dos bocas. Sus paredes son de un blanco luminoso y sus ventanas azul añil. Y cubriendo el conjunto un tejado ocre de tintes anaranjados.
+
+En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
-      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias [...]`,
+      botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta última es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
       servicesTitle: "Planifica Tu Visita",
       servicesList: [
         "Recorridos culturales e históricos",
@@ -48,9 +50,17 @@ export default function ElPicachoLanding() {
       ),
       subtitle: "An 1800s manor house nestled in a botanical sanctuary, perched above the upper basin of the Guadalquivir River.",
       historyTitle: "A Terruño Steeped in History",
-      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez [...]`,
+      historyText: `Place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor. In the 21st century, the Paz Zamora family settled in the house, committed to resisting Bolivia’s military coups and to the establishment of democracy. With an ecological vision, they began the creation of the botanical park.
+
+The manor, surrounded by cypresses, stands atop a gorge carved by the river. In the middle of its waters rises a rock shaped like a beak, which locals have long called “El Picacho.” Over time, the name came to designate the entire place. El Picacho is a Salamanca—a name given to the caves smoothed by water, believed in popular mythology to be dwellings of the devil.
+
+The settlement dates to the late colonial period. At its entrance, there is a stone fountain, a hallway with heavy carob wood lintels, two courtyards, a chapel, a bell tower, and a twin-mouth mill. Its walls are a luminous white, its windows deep indigo blue, and the whole structure is covered by an ochre-tiled roof tinged with orange.
+
+In today’s Bolivia, El Picacho embodies national identity and history—from the colonial period, through independence and the republic, to the ongoing construction of democracy.`,
       botanicTitle: "Botanical Park: A Living Unity in Diversity",
-      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant [...]`,
+      botanicText: `The botanical garden is a biological mestizaje. Native species of the region live alongside others brought from distant microclimates, some from very far away. Churqui, algarrobo, tipa, chañar, and toborochi trees, for instance, share space with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas, among others.
+
+The latter is ancient—considered a living fossil, a botanical dinosaur. It is said to have survived just a few hundred meters from where the atomic bomb dropped on Hiroshima.`,
       servicesTitle: "Arrange Your Visit",
       servicesList: [
         "Cultural and historical tours",
@@ -66,11 +76,7 @@ export default function ElPicachoLanding() {
 
   return (
     <div className="font-sans text-gray-800">
-      {/* Logo and Nav inside Hero */}
-      <div
-        className="relative h-screen bg-cover bg-center"
-        style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
-      >
+      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}>
         <div className={`absolute top-6 left-6 z-50 font-bold text-lg transition-colors ${scrolled ? 'text-[#16309e]' : 'text-white'}`}>
           El Picacho
         </div>
@@ -83,25 +89,28 @@ export default function ElPicachoLanding() {
           <a href="/picacheada" className="hover:border-b-2 border-current pb-1">Reservas</a>
         </nav>
 
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
-          <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
+        <div className="absolute top-16 right-6 z-50">
           <button
             onClick={langToggle}
-            className="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
+            className={`px-4 py-1 border text-sm rounded transition ${
+              scrolled ? 'text-[#16309e] border-[#16309e]' : 'text-white border-white'
+            } hover:bg-[#16309e] hover:text-white`}
           >
             {lang === "es" ? "English" : "Español"}
           </button>
         </div>
+
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
+          <h1 className="text-white font-bold mb-4 max-w-4xl">{t[lang].title}</h1>
+          <p className="text-xl text-white mb-6 max-w-2xl">{t[lang].subtitle}</p>
+        </div>
       </div>
 
-      {/* History Section */}
       <section id="historia" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].historyTitle}</h2>
         <p className="text-lg text-[#3e484a] whitespace-pre-line">{t[lang].historyText}</p>
       </section>
 
-      {/* Botanic Section */}
       <section id="botanico" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].botanicTitle}</h2>
         <p className="text-lg text-[#3e484a] mb-6 whitespace-pre-line">{t[lang].botanicText}</p>
@@ -139,7 +148,6 @@ export default function ElPicachoLanding() {
         </Modal>
       </section>
 
-      {/* Visit / Services Section */}
       <section id="visita" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].servicesTitle}</h2>
         <ul className="list-disc ml-6 text-lg mb-2 text-[#3e484a]">
@@ -148,7 +156,6 @@ export default function ElPicachoLanding() {
           ))}
         </ul>
 
-        {/* CTA Button */}
         <div className="text-center mt-10 border-t border-[#16309e]/15 pt-10">
           <a
             href="/picacheada"
