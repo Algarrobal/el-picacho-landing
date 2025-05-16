@@ -137,7 +137,11 @@ Crossing the river leads you to a preserved woodland trail native to the region.
 
       {/* Offering Sections */}
       {t[lang].sections.map((section, i) => (
-        <div key={i} id={section.id} className="mb-20 flex flex-col md:flex-row gap-8 items-center scroll-mt-24">
+        <div
+          key={i}
+          id={section.id}
+          className="mb-20 flex flex-col md:flex-row gap-8 items-start scroll-mt-24"
+        >
           <img
             src={section.image}
             alt={section.title}
@@ -147,9 +151,7 @@ Crossing the river leads you to a preserved woodland trail native to the region.
             <h2 className="text-2xl font-semibold mb-3 text-[#16309e]">
               {section.title}
             </h2>
-            <p className="text-lg mb-4 text-[#3e484a] whitespace-pre-line">
-              {section.text}
-            </p>
+            <p className="text-lg mb-4 text-[#3e484a] whitespace-pre-line">{section.text}</p>
             <button className="px-6 py-2 text-base text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition">
               {section.button}
             </button>
