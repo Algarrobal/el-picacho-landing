@@ -18,7 +18,7 @@ export default function Expresiones() {
         {
           id: "land-art",
           title: "Land Art, naturaleza y arte",
-          text: `En el Picacho se desarrolla la disciplina artística de “Land Art”, tanto en su expresión paisajista articulada al parque botánico cuanto a la práctica de las “instalaciones”. Estas están inspiradas en piedras del río y troncos del bosque. En el conjunto hay una remembranza de la pintura negra de Goya, un Fernando Botero del lugar, un torso de Marina Núñez del Prado, un “Origen del Mundo” de Gustav Courbet en piedra lamida por las aguas, y al pie del campanario, un homenaje en piedra negra sobr...
+          text: `En el Picacho se desarrolla la disciplina artística de “Land Art”, tanto en su expresión paisajista articulada al parque botánico cuanto a la práctica de las “instalaciones”. Estas están inspiradas en piedras del río y troncos del bosque. En el conjunto hay una remembranza de la pintura negra de Goya, un Fernando Botero del lugar, un torso de Marina Núñez del Prado, un “Origen del Mundo” de Gustav Courbet en piedra lamida por las aguas, y al pie del campanario, un homenaje en piedra negra sobre piedra blanca al gran poeta latinoamericano César Vallejo, entre otras instalaciones...`
         },
         {
           id: "pinacoteca",
@@ -84,6 +84,7 @@ export default function Expresiones() {
 
   return (
     <div className="font-sans min-h-screen bg-white text-[#3e484a] p-6 md:p-16">
+      {/* Title & Toggle */}
       <div className="flex justify-between items-center mb-12">
         <h1 className="text-3xl md:text-5xl font-bold text-[#16309e]">{t[lang].title}</h1>
         <button
@@ -94,10 +95,10 @@ export default function Expresiones() {
         </button>
       </div>
 
+      {/* Nav */}
       <h2 className="text-xl font-semibold mb-4 text-center text-[#16309e]">
         {lang === "es" ? "Explorar secciones" : "Explore Sections"}
       </h2>
-
       <ul className="flex flex-wrap justify-center gap-6 mb-12 text-[#16309e]">
         {t[lang].sections.map((section, idx) => (
           <li key={idx}>
@@ -111,18 +112,26 @@ export default function Expresiones() {
         ))}
       </ul>
 
+      {/* Sections */}
       {t[lang].sections.map((section, i) => (
         <div key={i} id={section.id} className="mb-20 scroll-mt-24">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">{section.title}</h2>
           <p className="text-lg mb-6 whitespace-pre-line">{section.text}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 1</div>
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 2</div>
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 3</div>
+            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+              Imagen 1
+            </div>
+            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+              Imagen 2
+            </div>
+            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+              Imagen 3
+            </div>
           </div>
         </div>
       ))}
 
+      {/* Back to Home Button */}
       <div className="text-center mt-16">
         <a
           href="/"
