@@ -155,7 +155,7 @@ The latter is ancient—considered a living fossil, a botanical dinosaur. It is 
 
         <div className="text-center mt-10 border-t border-[#16309e]/15 pt-10">
           <a
-            href="/picacheada"
+            href="/expresiones"
             className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
           >
             {lang === "es"
