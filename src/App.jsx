@@ -160,27 +160,27 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       ))}
     </div>
 
-        <Modal
-          isOpen={!!selectedImage}
-          onRequestClose={() => setSelectedImage(null)}
-          className="flex items-center justify-center h-screen w-screen p-0 sm:p-4"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center"
-        >
-          <div className="relative w-full max-w-[90vw] max-h-[90vh]">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
-              aria-label="Close"
-            >
-              ×
-            </button>
-            <img
-              src={`/${selectedImage}`}
-              alt="Zoomed El Picacho"
-              className="w-full h-auto rounded-lg shadow-xl"
-            />
-          </div>
-        </Modal>
+      <Modal
+        isOpen={!!selectedImage}
+        onRequestClose={() => setSelectedImage(null)}
+        className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-75"
+>
+        <div className="relative bg-black rounded-lg p-2 max-w-full max-h-screen overflow-hidden">
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-2 right-2 text-white text-3xl font-bold z-50"
+    >
+            ×
+          </button>
+          <img
+            src={`/${selectedImage}`}
+            alt="Zoomed El Picacho"
+            className="rounded-lg shadow-xl object-contain w-full max-h-[90vh]"
+          />
+        </div>
+      </Modal>
+
       </section>
 
       <section id="visitanos" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
