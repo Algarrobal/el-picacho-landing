@@ -7,7 +7,6 @@ export default function Expresiones() {
     es: {
       title: "Expresiones de El Picacho",
       toggle: "English",
-      back: "← Volver al Inicio",
       nav: [
         "Land Art, naturaleza y arte",
         "La Pinacoteca Familiar",
@@ -19,7 +18,7 @@ export default function Expresiones() {
         {
           id: "land-art",
           title: "Land Art, naturaleza y arte",
-          text: `En el Picacho se desarrolla la disciplina artística de “Land Art”, tanto en su expresión paisajista articulada al parque botánico cuanto a la práctica de las “instalaciones”. Estas están inspiradas en piedras del río y troncos del bosque. En el conjunto hay una remembranza de la pintura negra de Goya, un Fernando Botero del lugar, un torso de Marina Núñez del Prado, un “Origen del Mundo” de Gustav Courbet en piedra lamida por las aguas, y al pie del campanario, un homenaje en piedra negra sobre piedra blanca al gran poeta latinoamericano César Vallejo, entre otras instalaciones...`
+          text: `En el Picacho se desarrolla la disciplina artística de “Land Art”, tanto en su expresión paisajista articulada al parque botánico cuanto a la práctica de las “instalaciones”. Estas están inspiradas en piedras del río y troncos del bosque. En el conjunto hay una remembranza de la pintura negra de Goya, un Fernando Botero del lugar, un torso de Marina Núñez del Prado, un “Origen del Mundo” de Gustav Courbet en piedra lamida por las aguas, y al pie del campanario, un homenaje en piedra negra sobr...
         },
         {
           id: "pinacoteca",
@@ -46,7 +45,6 @@ export default function Expresiones() {
     en: {
       title: "Expressions of El Picacho",
       toggle: "Español",
-      back: "← Back to Landing Page",
       nav: [
         "Land Art, Nature and Art",
         "The Family Art Gallery",
@@ -100,12 +98,12 @@ export default function Expresiones() {
         {lang === "es" ? "Explorar secciones" : "Explore Sections"}
       </h2>
 
-      <ul className="flex flex-wrap justify-center gap-6 mb-12">
+      <ul className="flex flex-wrap justify-center gap-6 mb-12 text-[#16309e]">
         {t[lang].sections.map((section, idx) => (
           <li key={idx}>
             <a
               href={`#${section.id}`}
-              className="text-[#16309e] hover:border-b-2 hover:border-[#16309e] pb-1 transition"
+              className="hover:border-b-2 border-current pb-1 transition"
             >
               {t[lang].nav[idx]}
             </a>
@@ -116,7 +114,7 @@ export default function Expresiones() {
       {t[lang].sections.map((section, i) => (
         <div key={i} id={section.id} className="mb-20 scroll-mt-24">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">{section.title}</h2>
-          <p className="text-lg mb-6">{section.text}</p>
+          <p className="text-lg mb-6 whitespace-pre-line">{section.text}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 1</div>
             <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 2</div>
@@ -130,7 +128,7 @@ export default function Expresiones() {
           href="/"
           className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
         >
-          {t[lang].back}
+          ← {lang === "es" ? "Volver al Inicio" : "Back to Home"}
         </a>
       </div>
     </div>
