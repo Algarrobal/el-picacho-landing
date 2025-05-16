@@ -148,17 +148,18 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       <section id="botanico" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#16309e]">{t.es.botanicTitle}</h2>
         <p className="text-base sm:text-lg mb-6 whitespace-pre-line leading-relaxed">{t.es.botanicText}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((src, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+         {images.map((src, i) => (
             <img
               key={i}
               src={`/${src}`}
-              alt="El Picacho"
-              className="rounded-lg shadow-md object-cover w-full h-56 sm:h-64 md:h-64 cursor-pointer border border-white hover:opacity-90 transition"
+              alt={`El Picacho ${i + 1}`}
+              className="rounded-lg shadow-md object-cover w-full h-64 sm:h-72 md:h-80 cursor-pointer border border-white transition-transform duration-300 hover:scale-105"
               onClick={() => setSelectedImage(src)}
-            />
-          ))}
-        </div>
+        />
+      ))}
+    </div>
+
         <Modal
           isOpen={!!selectedImage}
           onRequestClose={() => setSelectedImage(null)}
