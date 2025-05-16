@@ -7,13 +7,7 @@ export default function Expresiones() {
     es: {
       title: "Expresiones de El Picacho",
       toggle: "English",
-      nav: [
-        "Land Art, naturaleza y arte",
-        "La Pinacoteca Familiar",
-        "Paleontología y Fósiles",
-        "Arqueología Originaria",
-        "Obras de Cantería"
-      ],
+      nav: ["Land Art", "La Pinacoteca", "Paleontología", "Arqueología", "Cantería"],
       sections: [
         {
           id: "land-art",
@@ -45,13 +39,7 @@ export default function Expresiones() {
     en: {
       title: "Expressions of El Picacho",
       toggle: "Español",
-      nav: [
-        "Land Art, Nature and Art",
-        "The Family Art Gallery",
-        "Paleontology and Fossils",
-        "Indigenous Archaeology",
-        "Stonework Sculptures"
-      ],
+      nav: ["Land Art", "La Pinacoteca", "Paleontology", "Archaeology", "Stonework"],
       sections: [
         {
           id: "land-art",
@@ -83,69 +71,70 @@ export default function Expresiones() {
   };
 
   return (
-    <div className="font-sans min-h-screen bg-white text-[#3e484a] p-6 md:p-16">
-      {/* Logo and Language Toggle */}
-      <div className="flex justify-between items-center mb-8">
+    <div className="font-sans min-h-screen bg-white text-[#3e484a]">
+      {/* Sticky nav with logo and menu */}
+      <header className="sticky top-0 bg-white z-50 flex flex-wrap items-center justify-between px-6 md:px-16 py-4 border-b border-[#16309e]/15">
         <a
           href="/"
-          className="text-2xl md:text-3xl font-bold text-[#16309e] hover:underline"
+          className="text-xl md:text-2xl font-bold text-[#16309e] hover:underline"
         >
           El Picacho
         </a>
-        <button
-          onClick={() => setLang(lang === "es" ? "en" : "es")}
-          className="bg-transparent text-sm md:text-base border border-[#16309e] px-4 py-2 rounded hover:bg-[#16309e] hover:text-white transition"
-        >
-          {t[lang].toggle}
-        </button>
-      </div>
-
-      {/* Page Title */}
-      <h1 className="text-3xl md:text-5xl font-bold text-[#16309e] mb-10 text-center">
-        {t[lang].title}
-      </h1>
-
-      {/* Navigation Menu */}
-      <ul className="flex flex-wrap justify-center gap-6 mb-12 text-[#16309e]">
-        {t[lang].sections.map((section, idx) => (
-          <li key={idx}>
+        <nav className="flex flex-wrap items-center gap-6 text-[#16309e] text-sm md:text-base">
+          {t[lang].sections.map((section, idx) => (
             <a
+              key={section.id}
               href={`#${section.id}`}
               className="hover:border-b-2 border-current pb-1 transition"
             >
               {t[lang].nav[idx]}
             </a>
-          </li>
-        ))}
-      </ul>
+          ))}
+          <button
+            onClick={() => setLang(lang === "es" ? "en" : "es")}
+            className="px-3 py-1 border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+          >
+            {t[lang].toggle}
+          </button>
+        </nav>
+      </header>
+
+      {/* Page Title */}
+      <div className="text-center px-6 md:px-16 pt-12 md:pt-20 pb-10">
+        <h1 className="text-3xl md:text-5xl font-bold text-[#16309e]">
+          {t[lang].title}
+        </h1>
+      </div>
 
       {/* Sections */}
-      {t[lang].sections.map((section, i) => (
-        <div key={i} id={section.id} className="mb-20 scroll-mt-24">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">{section.title}</h2>
-          <p className="text-lg mb-6 whitespace-pre-line">{section.text}</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
-              Imagen 1
-            </div>
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
-              Imagen 2
-            </div>
-            <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
-              Imagen 3
+      <div className="px-6 md:px-16 pb-16">
+        {t[lang].sections.map((section, i) => (
+          <div key={i} id={section.id} className="mb-20 scroll-mt-24">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">{section.title}</h2>
+            <p className="text-lg mb-6 whitespace-pre-line">{section.text}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+                Imagen 1
+              </div>
+              <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+                Imagen 2
+              </div>
+              <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">
+                Imagen 3
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
 
-      {/* Back to Home Button */}
-      <div className="text-center mt-16">
-        <a
-          href="/"
-          className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
-        >
-          ← {lang === "es" ? "Volver al Inicio" : "Back to Home"}
-        </a>
+        {/* Back to Home Button */}
+        <div className="text-center mt-16">
+          <a
+            href="/"
+            className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+          >
+            ← {lang === "es" ? "Volver al Inicio" : "Back to Home"}
+          </a>
+        </div>
       </div>
     </div>
   );
