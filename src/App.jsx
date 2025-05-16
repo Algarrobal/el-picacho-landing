@@ -146,7 +146,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
               key={i}
               src={`/${src}`}
               alt="El Picacho"
-              className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer border border-white"
+              className="rounded-lg shadow-md object-cover w-full h-56 sm:h-64 md:h-64 cursor-pointer border border-white hover:opacity-90 transition"
               onClick={() => setSelectedImage(src)}
             />
           ))}
@@ -154,20 +154,21 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         <Modal
           isOpen={!!selectedImage}
           onRequestClose={() => setSelectedImage(null)}
-          className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+          className="flex items-center justify-center h-screen w-screen p-0 sm:p-4"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center"
         >
-          <div className="relative">
+          <div className="relative w-full max-w-[90vw] max-h-[90vh]">
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
+              aria-label="Close"
             >
               ×
             </button>
             <img
               src={`/${selectedImage}`}
               alt="Zoomed El Picacho"
-              className="max-h-screen max-w-full rounded-lg shadow-xl"
+              className="w-full h-auto rounded-lg shadow-xl"
             />
           </div>
         </Modal>
