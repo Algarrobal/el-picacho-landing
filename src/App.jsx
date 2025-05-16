@@ -82,7 +82,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
     <li>
       <button
         onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
-        className="px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
+        className="px-4 py-2 text-sm md:text-base border border-white rounded hover:bg-white hover:text-black transition"
       >
         English
       </button>
@@ -190,7 +190,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
             <li key={idx}>
               <a
                 href="/picacheada"
-                className="text-[#16309e] hover:text-black transition"
+                className="text-[#16309e] hover:text-black transition text-sm sm:text-base"
               >
                 {item}
               </a>
@@ -200,7 +200,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         <div className="text-center">
           <a
             href="/expresiones"
-            className="inline-block w-full sm:w-auto px-6 py-3 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded-md hover:bg-[#c00093] hover:text-white transition"
+            className="inline-block px-6 py-3 text-sm md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
           >
             Descubre Más Rincones de El Picacho
           </a>
