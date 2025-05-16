@@ -60,28 +60,68 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
       >
-        <nav className="absolute top-4 left-4 right-4 flex justify-between items-center z-50">
-          <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
-            El Picacho
-          </a>
-          <ul className="flex gap-6 text-white text-sm md:text-base">
-            {navItems.map(({ label, href }) => (
-              <li key={label}>
-                <a href={href} className="hover:border-b border-white pb-1 transition">
-                  {label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <button
-                onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
-                className="px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
-              >
-                English
-              </button>
-            </li>
-          </ul>
-        </nav>
+        const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // add this near your useState declarations
+
+{/* Navigation */}
+<nav className="absolute top-4 left-4 right-4 flex justify-between items-center z-50">
+  {/* Logo */}
+  <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
+    El Picacho
+  </a>
+
+  {/* Desktop Nav */}
+  <ul className="hidden md:flex gap-6 text-white text-sm md:text-base">
+    {navItems.map(({ label, href }) => (
+      <li key={label}>
+        <a href={href} className="hover:border-b border-white pb-1 transition">
+          {label}
+        </a>
+      </li>
+    ))}
+    <li>
+      <button
+        onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
+        className="px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
+      >
+        English
+      </button>
+    </li>
+  </ul>
+
+  {/* Mobile Hamburger */}
+  <button
+    className="md:hidden text-white text-2xl focus:outline-none"
+    onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+    aria-label="Toggle Menu"
+  >
+    ☰
+  </button>
+</nav>
+
+{/* Mobile Dropdown Menu */}
+{isMobileMenuOpen && (
+  <div className="absolute top-20 left-4 right-4 z-40 bg-white text-[#16309e] rounded shadow-lg p-4 space-y-4 text-sm">
+    {navItems.map(({ label, href }) => (
+      <a
+        key={label}
+        href={href}
+        className="block hover:underline"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {label}
+      </a>
+    ))}
+    <button
+      onClick={() => {
+        setLang(lang => (lang === "es" ? "en" : "es"));
+        setMobileMenuOpen(false);
+      }}
+      className="block w-full text-left border border-[#16309e] px-3 py-2 rounded hover:bg-[#16309e] hover:text-white transition"
+    >
+      English
+    </button>
+  </div>
+)}
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t.es.title}</h1>
