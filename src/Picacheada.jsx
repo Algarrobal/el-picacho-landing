@@ -8,10 +8,15 @@ export default function Picacheada() {
       title: "Planifica Tu Visita",
       toggle: "English",
       nav: [
-        { label: "Inicio", link: "/" }
+        { label: "Inicio", link: "/" },
+        { label: "Cultura e Historia", link: "#historia" },
+        { label: "El Botánico", link: "#botanico" },
+        { label: "Sabores del Picacho", link: "#sabores" },
+        { label: "Encuentro y Celebraciones", link: "#encuentro" }
       ],
       sections: [
         {
+          id: "historia",
           title: "Recorridos culturales e históricos",
           text: `Conoce El Picacho comenzando por el portal anunciado en piedra, siguiendo el paseo de la Verbena hasta la plazoleta de la fuente, flanqueada por la capilla. Desde allí, verás ahí cerca el río Guadalquivir, en cuyas aguas se alza el rocoso Picacho, junto al camposanto familiar.
 
@@ -22,6 +27,7 @@ Luego explorarás la antigua casona con sus dos patios y diversos ambientes: la 
           button: "Reservar Recorrido"
         },
         {
+          id: "botanico",
           title: "Visitas guiadas por el parque botánico",
           text: `Descubre la riqueza del botánico que rodea el conjunto de El Picacho. Conocerás sus distintas especies entre ellas los milenarios ginkgo bilobas, liquidámbares, araucarias, y los así llamados árboles de Júpiter, coníferas del parque imperial japonés, alcanfores, y laureles del jardín del Vaticano, que cohabitan con nuestros emblemáticos molles, churquis, y algarrobos.
 
@@ -32,12 +38,14 @@ Cruzando el río tendrás la experiencia de un paseo en montaña del monte origi
           button: "Reservar Visita"
         },
         {
+          id: "sabores",
           title: "Sabores de El Picacho",
           text: `Próximamente.`,
           image: "/picacheada_sabores.jpg",
           button: "Reservar Almuerzo"
         },
         {
+          id: "encuentro",
           title: "Lugar de Encuentro y Celebraciones",
           text: `Próximamente.`,
           image: "/picacheada_encuentro.jpg",
@@ -49,10 +57,15 @@ Cruzando el río tendrás la experiencia de un paseo en montaña del monte origi
       title: "Arrange Your Visit",
       toggle: "Español",
       nav: [
-        { label: "Home", link: "/" }
+        { label: "Home", link: "/" },
+        { label: "Culture & History", link: "#historia" },
+        { label: "The Botanical Park", link: "#botanico" },
+        { label: "Flavors of El Picacho", link: "#sabores" },
+        { label: "Gatherings & Celebrations", link: "#encuentro" }
       ],
       sections: [
         {
+          id: "historia",
           title: "Cultural and historical tours",
           text: `Begin your experience at El Picacho at the stone-marked entrance, continuing down the Verbena walk to the plaza of the fountain, flanked by the chapel. From there, you’ll glimpse the Guadalquivir River, with the rocky Picacho rising beside the family memorial grounds.
 
@@ -63,6 +76,7 @@ You’ll explore the historic manor with its two courtyards and various rooms: t
           button: "Book Tour"
         },
         {
+          id: "botanico",
           title: "Guided walks through the botanical park",
           text: `Discover the botanical richness surrounding El Picacho. You’ll encounter native and exotic species—from millennia-old ginkgo bilobas and liquidambars to Japanese imperial park conifers, camphor trees, and Vatican laurels—coexisting with local molles, churquis, and algarrobos.
 
@@ -73,12 +87,14 @@ Crossing the river leads you to a preserved woodland trail native to the region.
           button: "Book Walk"
         },
         {
+          id: "sabores",
           title: "Flavors of El Picacho",
           text: `Coming soon.`,
           image: "/picacheada_sabores.jpg",
           button: "Book Lunch"
         },
         {
+          id: "encuentro",
           title: "Gatherings and Celebrations",
           text: `Coming soon.`,
           image: "/picacheada_encuentro.jpg",
@@ -121,10 +137,7 @@ Crossing the river leads you to a preserved woodland trail native to the region.
 
       {/* Offering Sections */}
       {t[lang].sections.map((section, i) => (
-        <div
-          key={i}
-          className="mb-20 flex flex-col md:flex-row gap-8 items-center"
-        >
+        <div key={i} id={section.id} className="mb-20 flex flex-col md:flex-row gap-8 items-center scroll-mt-24">
           <img
             src={section.image}
             alt={section.title}
@@ -144,11 +157,11 @@ Crossing the river leads you to a preserved woodland trail native to the region.
         </div>
       ))}
 
-      {/* Back to Home */}
+      {/* Back to Home Button */}
       <div className="text-center mt-16 pb-12">
         <a
           href="/"
-          className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+          className="inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
         >
           ← {lang === "es" ? "Volver al Inicio" : "Back to Home"}
         </a>
