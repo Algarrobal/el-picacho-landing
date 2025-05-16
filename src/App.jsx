@@ -13,15 +13,27 @@ export default function ElPicachoLanding() {
       subtitle: "Historia, Naturaleza y Democracia",
       subsubtitle: "en el Sur de Bolivia",
       tagline: "Una casona del 1800 en un parque botánico sobre\nla cuenca alta del río Guadalquivir.",
-      historyTitle: "Un Terruño con Historia",
+      historyTitle: (
+        <>
+          Un <span className="text-[#c00093]">Terruño</span> con Historia
+        </>
+      ),
       historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
 
 La casona, rodeada de cipreses, se encuentra en lo alto de un desfiladero cavado por el rio, en medio de cuyas aguas surge un peñón en forma de pico que desde siempre el paisanaje lo denominó “El Picacho”, que con el tiempo le dio nombre al lugar. El Picacho es una “Salamanca" nombre que la gente da a los socavones que el agua pule en su seno, y que según mitología popular, es donde habitan los diablos. El asentamiento es de finales de la colonia, a su entrada una fuente de agua en piedra, zaguán con gruesos dinteles de madera de algarrobo, dos patios, capilla, campanario, y molino de dos bocas. Sus paredes son de un blanco luminoso y sus ventanas azul añil. Y cubriendo el conjunto un tejado ocre de tintes anaranjados.
 
 En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde la colonia, la independencia, la república hasta la democracia que se construye hoy.`,
-      botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
+      botanicTitle: (
+        <>
+          Parque <span className="text-[#c00093]">Botánico</span>: Unidad biológica, en la diversidad…
+        </>
+      ),
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
-      visitTitle: "Planifica Tu Visita",
+      visitTitle: (
+        <>
+          Planifica Tu <span className="text-[#c00093]">Visita</span>
+        </>
+      ),
       offerings: [
         "Recorridos culturales e históricos",
         "Visitas guiadas por el parque botánico",
@@ -137,7 +149,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         <div className="text-center">
           <a
             href="/expresiones"
-            className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+            className="inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
           >
             Descubre Más Rincones de El Picacho
           </a>
