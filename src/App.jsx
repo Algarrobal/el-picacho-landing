@@ -75,7 +75,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t.es.title}</h1>
           <h2 className="text-2xl md:text-3xl text-white mb-2">{t.es.subtitle}</h2>
           <h3 className="text-2xl md:text-3xl text-white mb-2">{t.es.subsubtitle}</h3>
-          <p className="text-white text-base md:text-lg whitespace-pre-line">{t.es.tagline}</p>
+          <p className="text-white text-base md:text-lg whitespace-pre-line mt-4">{t.es.tagline}</p>
         </div>
       </div>
 
@@ -122,12 +122,12 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
 
       <section id="visitanos" className="p-8 md:p-16 bg-white">
         <h2 className="text-3xl font-semibold mb-8 text-[#16309e]">{t.es.visitTitle}</h2>
-        <ul className="space-y-4 text-lg mb-10">
+        <ul className="list-disc ml-6 space-y-4 text-lg mb-10">
           {t.es.offerings.map((item, idx) => (
             <li key={idx}>
               <a
                 href="/picacheada"
-                className="block text-[#16309e] hover:text-black transition"
+                className="text-[#16309e] hover:text-black transition"
               >
                 {item}
               </a>
