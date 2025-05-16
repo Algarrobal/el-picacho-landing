@@ -74,7 +74,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
   <ul className="hidden md:flex gap-6 text-white text-sm md:text-base">
     {navItems.map(({ label, href }) => (
       <li key={label}>
-        <a href={href} className="hover:border-b border-white pb-1 transition">
+        <a href={href} className="min-h-tap hover:border-b border-white pb-1 transition">
           {label}
         </a>
       </li>
@@ -82,7 +82,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
     <li>
       <button
         onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
-        className="px-4 py-2 text-sm md:text-base border border-white rounded hover:bg-white hover:text-black transition"
+        className="min-h-tap px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
       >
         English
       </button>
@@ -190,7 +190,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
             <li key={idx}>
               <a
                 href="/picacheada"
-                className="text-[#16309e] hover:text-black transition text-sm sm:text-base"
+                className="min-h-tap inline-block text-[#16309e] hover:text-black transition"
               >
                 {item}
               </a>
@@ -200,7 +200,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         <div className="text-center">
           <a
             href="/expresiones"
-            className="inline-block px-6 py-3 text-sm md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
+            className="min-h-tap inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
           >
             Descubre Más Rincones de El Picacho
           </a>
