@@ -11,6 +11,7 @@ export default function ElPicachoLanding() {
     es: {
       title: "El Picacho",
       subtitle: "Historia, Naturaleza y Democracia\nen el Sur de Bolivia",
+      subsubtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
       historyTitle: "Un Terruño con Historia",
       historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
 
@@ -20,58 +21,25 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       botanicTitle: "Parque Botánico: Unidad biológica, en la diversidad…",
       botanicText: `El botánico es un mestizaje biológico. Las especies nativas del lugar conviven con especies originarias llegadas de otros microclimas, algunos muy lejanos. Los churquis, algarrobos, tipas, chañares o toborochis por ejemplo, cohabitan con cipreses mediterráneos, coníferas japonesas, araucarias patagónicas, robles americanos y europeos, liquidámbares del hemisferio norte, alamos tulipán, y gingko bilobas del Asia, entre otras. Esta ultima es milenaria, considerada un dinosaurio, o fósil viviente vegetal. Se dice de ella que sobrevivió a unos centenares de metros a la bomba atómica lanzada en Hiroshima.`,
       visitTitle: "Planifica Tu Visita",
-      services: [
-        {
-          title: "Recorridos culturales e históricos",
-          link: "/picacheada"
-        },
-        {
-          title: "Visitas guiadas por el parque botánico",
-          link: "/picacheada"
-        },
-        {
-          title: "Sabores de El Picacho - Donde el menú es con historia y naturaleza",
-          link: "/picacheada"
-        },
-        {
-          title: "Lugar de Encuentro y Celebraciones",
-          link: "/picacheada"
-        }
-      ],
-      footer: "© El Picacho 2025 | Tarija, Bolivia"
-    },
-    en: {
-      title: "El Picacho",
-      subtitle: "History, Nature, and Democracy\nin the South of Bolivia",
-      historyTitle: "A Terruño Steeped in History",
-      historyText: "...", // You can fill in the English version
-      botanicTitle: "Botanical Park: A Living Unity in Diversity",
-      botanicText: "...", // You can fill in the English version
-      visitTitle: "Plan Your Visit",
-      services: [
-        {
-          title: "Cultural and historical tours",
-          link: "/picacheada"
-        },
-        {
-          title: "Guided walks through the botanical park",
-          link: "/picacheada"
-        },
-        {
-          title: "Flavors of El Picacho - Where menus are steeped in story and nature",
-          link: "/picacheada"
-        },
-        {
-          title: "Gatherings and Celebrations",
-          link: "/picacheada"
-        }
+      offerings: [
+        "Recorridos culturales e históricos",
+        "Visitas guiadas por el parque botánico",
+        "Sabores de El Picacho - Donde el menú es con historia y naturaleza",
+        "Lugar de Encuentro y Celebraciones"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     }
   };
 
+  const navItems = [
+    { label: "Historia", href: "#historia" },
+    { label: "Botánico", href: "#botanico" },
+    { label: "Visítanos", href: "#visitanos" },
+    { label: "Rincones", href: "/expresiones" },
+    { label: "Reservas", href: "/picacheada" }
+  ];
+
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
-  const langToggle = () => setLang(lang === "es" ? "en" : "es");
 
   return (
     <div className="font-sans text-[#3e484a]">
@@ -79,89 +47,105 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">{t[lang].title}</h1>
-          <p className="text-xl md:text-2xl text-white whitespace-pre-line">{t[lang].subtitle}</p>
-        </div>
+        <nav className="absolute top-4 left-4 right-4 flex justify-between items-center z-50">
+          <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
+            El Picacho
+          </a>
+          <ul className="flex gap-6 text-white text-sm md:text-base">
+            {navItems.map(({ label, href }) => (
+              <li key={label}>
+                <a href={href} className="hover:border-b border-white pb-1 transition">
+                  {label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <button
+                onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
+                className="px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
+              >
+                English
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-        <div className="absolute top-4 left-4 text-white font-bold text-xl md:text-2xl z-50">
-          <a href="/">El Picacho</a>
-        </div>
-
-        <div className="absolute top-4 right-4 z-50 flex gap-6 items-center text-white text-lg">
-          <a href="#historia" className="hover:border-b-2 border-white pb-1 transition">Historia</a>
-          <a href="#botanico" className="hover:border-b-2 border-white pb-1 transition">Botánico</a>
-          <a href="#visita" className="hover:border-b-2 border-white pb-1 transition">Visítanos</a>
-          <a href="/expresiones" className="hover:border-b-2 border-white pb-1 transition">Rincones</a>
-          <a href="/picacheada" className="hover:border-b-2 border-white pb-1 transition">Reservas</a>
-          <button
-            onClick={langToggle}
-            className="px-4 py-1 text-white text-sm border border-white rounded hover:bg-white hover:text-black transition"
-          >
-            {lang === "es" ? "English" : "Español"}
-          </button>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t.es.title}</h1>
+          <h2 className="text-xl md:text-2xl text-white whitespace-pre-line">
+            {t.es.subtitle}
+          </h2>
+          <p className="text-white text-base md:text-lg mt-2">{t.es.subsubtitle}</p>
         </div>
       </div>
 
-      <section id="historia" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].historyTitle}</h2>
-        <p className="text-lg whitespace-pre-line">{t[lang].historyText}</p>
+      <section id="historia" className="p-8 md:p-16 bg-white">
+        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t.es.historyTitle}</h2>
+        <p className="text-lg whitespace-pre-line">{t.es.historyText}</p>
       </section>
 
-      <section id="botanico" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].botanicTitle}</h2>
-        <p className="text-lg whitespace-pre-line">{t[lang].botanicText}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+      <section id="botanico" className="p-8 md:p-16 bg-white">
+        <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t.es.botanicTitle}</h2>
+        <p className="text-lg mb-6 whitespace-pre-line">{t.es.botanicText}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <img
               key={i}
               src={`/${src}`}
               alt="El Picacho"
-              className="rounded-lg shadow-md object-cover w-full h-64 border border-white cursor-pointer"
+              className="rounded-lg shadow-md object-cover w-full h-64 cursor-pointer border border-white"
               onClick={() => setSelectedImage(src)}
             />
           ))}
         </div>
-      </section>
-
-      <Modal
-        isOpen={!!selectedImage}
-        onRequestClose={() => setSelectedImage(null)}
-        className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
-      >
-        <div className="relative">
-          <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
-          >
-            ×
-          </button>
-          <img
-            src={`/${selectedImage}`}
-            alt="Zoomed El Picacho"
-            className="max-h-screen max-w-full rounded-lg shadow-xl"
-          />
-        </div>
-      </Modal>
-
-      <section id="visita" className="p-8 md:p-16 bg-white border-t border-[#16309e]/15">
-        <h2 className="text-3xl font-semibold mb-8 text-[#16309e]">{t[lang].visitTitle}</h2>
-        <div className="grid gap-6">
-          {t[lang].services.map((service, i) => (
-            <a
-              key={i}
-              href={service.link}
-              className="block border border-[#16309e] rounded-lg p-6 hover:bg-[#16309e] hover:text-white transition"
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          className="flex items-center justify-center h-screen w-screen bg-black bg-opacity-90 p-4"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+        >
+          <div className="relative">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 text-white text-2xl font-bold z-50"
             >
-              <h3 className="text-xl font-semibold">{service.title}</h3>
-            </a>
+              ×
+            </button>
+            <img
+              src={`/${selectedImage}`}
+              alt="Zoomed El Picacho"
+              className="max-h-screen max-w-full rounded-lg shadow-xl"
+            />
+          </div>
+        </Modal>
+      </section>
+
+      <section id="visitanos" className="p-8 md:p-16 bg-white">
+        <h2 className="text-3xl font-semibold mb-8 text-[#16309e]">{t.es.visitTitle}</h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 text-lg mb-10">
+          {t.es.offerings.map((item, idx) => (
+            <li key={idx}>
+              <a
+                href="/picacheada"
+                className="block text-[#16309e] hover:text-black transition"
+              >
+                {item}
+              </a>
+            </li>
           ))}
+        </ul>
+        <div className="text-center">
+          <a
+            href="/expresiones"
+            className="inline-block px-6 py-2 text-base md:text-lg text-[#16309e] border border-[#16309e] rounded hover:bg-[#16309e] hover:text-white transition"
+          >
+            Descubre Más Rincones de El Picacho
+          </a>
         </div>
       </section>
 
-      <footer className="bg-gray-800 text-white text-center py-6 border-t border-[#16309e]/15">
-        {t[lang].footer}
+      <footer className="bg-gray-800 text-white text-center py-6">
+        {t.es.footer}
       </footer>
     </div>
   );
