@@ -6,7 +6,9 @@ Modal.setAppElement("#root");
 export default function ElPicachoLanding() {
   const [lang, setLang] = useState("es");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); 
 
+  
   const t = {
     es: {
       title: "El Picacho",
@@ -60,7 +62,6 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         className="relative h-screen bg-cover bg-center"
         style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
       >
-        const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // add this near your useState declarations
 
 {/* Navigation */}
 <nav className="absolute top-4 left-4 right-4 flex justify-between items-center z-50">
