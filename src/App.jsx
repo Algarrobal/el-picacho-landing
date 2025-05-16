@@ -10,8 +10,9 @@ export default function ElPicachoLanding() {
   const t = {
     es: {
       title: "El Picacho",
-      subtitle: "Historia, Naturaleza y Democracia\nen el Sur de Bolivia",
-      subsubtitle: "Una casona del 1800 en un parque botánico sobre la cuenca alta del río Guadalquivir.",
+      subtitle: "Historia, Naturaleza y Democracia",
+      subsubtitle: "en el Sur de Bolivia",
+      tagline: "Una casona del 1800 en un parque botánico sobre\nla cuenca alta del río Guadalquivir.",
       historyTitle: "Un Terruño con Historia",
       historyText: `Lugar en el que combatieron las “Montoneras” libertarias comandadas por el líder patriota Eustaquio “Moto” Mendez miembro de la familia Mendez Arenas, habitante primera de la Casona. En el siglo XXI se avecindó en ella la familia Paz Zamora comprometida en la lucha contra el golpismo militar boliviano y la instauración de la democracia. Con vocación ecológica inicia la construcción del parque botánico.
 
@@ -72,10 +73,9 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t.es.title}</h1>
-          <h2 className="text-xl md:text-2xl text-white whitespace-pre-line">
-            {t.es.subtitle}
-          </h2>
-          <p className="text-white text-base md:text-lg mt-2">{t.es.subsubtitle}</p>
+          <h2 className="text-2xl md:text-3xl text-white mb-2">{t.es.subtitle}</h2>
+          <p className="text-lg md:text-xl text-white mb-2">{t.es.subsubtitle}</p>
+          <p className="text-white text-base md:text-lg whitespace-pre-line">{t.es.tagline}</p>
         </div>
       </div>
 
@@ -122,7 +122,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
 
       <section id="visitanos" className="p-8 md:p-16 bg-white">
         <h2 className="text-3xl font-semibold mb-8 text-[#16309e]">{t.es.visitTitle}</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 text-lg mb-10">
+        <ul className="space-y-4 text-lg mb-10">
           {t.es.offerings.map((item, idx) => (
             <li key={idx}>
               <a
