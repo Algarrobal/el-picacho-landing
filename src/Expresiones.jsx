@@ -84,9 +84,14 @@ export default function Expresiones() {
 
   return (
     <div className="font-sans min-h-screen bg-white text-[#3e484a] p-6 md:p-16">
-      {/* Title & Toggle */}
-      <div className="flex justify-between items-center mb-12">
-        <h1 className="text-3xl md:text-5xl font-bold text-[#16309e]">{t[lang].title}</h1>
+      {/* Logo and Language Toggle */}
+      <div className="flex justify-between items-center mb-8">
+        <a
+          href="/"
+          className="text-2xl md:text-3xl font-bold text-[#16309e] hover:underline"
+        >
+          El Picacho
+        </a>
         <button
           onClick={() => setLang(lang === "es" ? "en" : "es")}
           className="bg-transparent text-sm md:text-base border border-[#16309e] px-4 py-2 rounded hover:bg-[#16309e] hover:text-white transition"
@@ -95,10 +100,12 @@ export default function Expresiones() {
         </button>
       </div>
 
-      {/* Nav */}
-      <h2 className="text-xl font-semibold mb-4 text-center text-[#16309e]">
-        {lang === "es" ? "Explorar secciones" : "Explore Sections"}
-      </h2>
+      {/* Page Title */}
+      <h1 className="text-3xl md:text-5xl font-bold text-[#16309e] mb-10 text-center">
+        {t[lang].title}
+      </h1>
+
+      {/* Navigation Menu */}
       <ul className="flex flex-wrap justify-center gap-6 mb-12 text-[#16309e]">
         {t[lang].sections.map((section, idx) => (
           <li key={idx}>
