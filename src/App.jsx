@@ -132,14 +132,14 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         </div>
       </div>
 
-      <section id="historia" className="p-8 md:p-16 bg-white">
+      <section id="historia" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t.es.historyTitle}</h2>
-        <p className="text-lg whitespace-pre-line">{t.es.historyText}</p>
+        <p className="text-lg whitespace-pre-line max-w-3xl mx-auto">{t.es.historyText}</p>
       </section>
 
-      <section id="botanico" className="p-8 md:p-16 bg-white">
+      <section id="botanico" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
         <h2 className="text-3xl font-semibold mb-4 text-[#16309e]">{t.es.botanicTitle}</h2>
-        <p className="text-lg mb-6 whitespace-pre-line">{t.es.botanicText}</p>
+        <p className="text-lg mb-6 whitespace-pre-line max-w-3xl mx-auto">{t.es.botanicText}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <img
@@ -173,7 +173,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         </Modal>
       </section>
 
-      <section id="visitanos" className="p-8 md:p-16 bg-white">
+      <section id="visitanos" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
         <h2 className="text-3xl font-semibold mb-8 text-[#16309e]">{t.es.visitTitle}</h2>
         <ul className="list-disc marker:text-[#c00093] ml-6 space-y-4 text-lg mb-10">
           {t.es.offerings.map((item, idx) => (
@@ -190,7 +190,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         <div className="text-center">
           <a
             href="/expresiones"
-            className="inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
+            className="inline-block w-full sm:w-auto px-6 py-3 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded-md hover:bg-[#c00093] hover:text-white transition"
           >
             Descubre Más Rincones de El Picacho
           </a>
