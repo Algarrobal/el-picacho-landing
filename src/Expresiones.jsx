@@ -127,13 +127,13 @@ export default function Expresiones() {
   };
 
   return (
-    <div className="font-sans min-h-screen bg-white text-[#3e484a] p-6 md:p-16">
+      <div className="font-sans min-h-screen bg-white text-[#3e484a] px-4 sm:px-6 md:px-16 py-8 md:py-16">
       {/* Header */}
       <div className="flex justify-between items-center mb-12">
         <a href="/" className="text-xl md:text-2xl font-bold text-[#16309e] hover:underline">
           El Picacho
         </a>
-        <ul className="flex items-center gap-6 text-sm md:text-base">
+        <ul <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm sm:text-base">
           {t[lang].nav.map((item, idx) => (
             <li key={idx}>
               <a
@@ -165,10 +165,10 @@ export default function Expresiones() {
       {/* Sections with Image Placeholders */}
       {t[lang].sections.map((section, i) => (
         <div key={i} id={section.id} className="mb-20 scroll-mt-24">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[#16309e]">
             {section.title}
           </h2>
-          <p className="text-lg mb-6 whitespace-pre-line">{section.text}</p>
+          <p className="text-base sm:text-lg mb-6 whitespace-pre-line">{section.text}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 1</div>
             <div className="bg-gray-100 h-48 rounded-md flex items-center justify-center text-gray-400">Imagen 2</div>
