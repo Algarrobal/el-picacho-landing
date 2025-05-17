@@ -123,7 +123,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
       >
 
 {/* Navigation */}
-<nav className="fixed top-0 left-0 right-0 bg-black bg-opacity-60 backdrop-blur-md px-4 py-2 flex justify-between items-center z-50">
+<nav className="fixed top-0 left-0 right-0 bg-black bg-opacity-15 backdrop-blur-md px-4 py-2 flex justify-between items-center z-50">
   
   {/* Logo */}
   <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
