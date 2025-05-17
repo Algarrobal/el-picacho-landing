@@ -141,17 +141,19 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-6 text-sm md:text-base">
           {t[lang].nav.map((item, idx) => (
-            <li key={idx}>
-              <a
-                href={item.link}
-                className={`hover:border-b-2 border-current pb-1 transition ${
-                  item.color ? "text-[#c00093]" : "text-[#16309e]"
-                }`}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
+  <li key={idx}>
+    <a
+      href={item.link}
+      className={`hover:border-b-2 border-current pb-1 transition ${
+        item.label === "Inicio" || item.label === "Home"
+          ? "text-[#c00093]"
+          : "text-[#16309e]"
+      }`}
+    >
+      {item.label}
+    </a>
+  </li>
+))}
           <li>
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
@@ -174,17 +176,19 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
         {isMobileMenuOpen && (
           <div className="absolute top-12 right-0 bg-white border border-gray-200 rounded shadow-md p-4 text-sm space-y-3 w-52">
             {t[lang].nav.map((item, idx) => (
-              <a
-                key={idx}
-                href={item.link}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block hover:underline ${
-                  item.color ? "text-[#c00093]" : "text-[#16309e]"
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+  <a
+    key={idx}
+    href={item.link}
+    onClick={() => setMobileMenuOpen(false)}
+    className={`block hover:underline ${
+      item.label === "Inicio" || item.label === "Home"
+        ? "text-[#c00093]"
+        : "text-[#16309e]"
+    }`}
+  >
+    {item.label}
+  </a>
+))}
             <button
               onClick={() => {
                 setLang(lang === "es" ? "en" : "es");
