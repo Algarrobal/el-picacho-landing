@@ -145,7 +145,10 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
     <a
       href={item.link}
       className={`hover:border-b-2 border-current pb-1 transition ${
-        item.label === "Inicio" || item.label === "Home"
+        item.label === "Inicio" ||
+        item.label === "Reservas" ||
+        item.label === "Home" ||
+        item.label === "Bookings"
           ? "text-[#c00093]"
           : "text-[#16309e]"
       }`}
@@ -181,7 +184,10 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
     href={item.link}
     onClick={() => setMobileMenuOpen(false)}
     className={`block hover:underline ${
-      item.label === "Inicio" || item.label === "Home"
+      item.label === "Inicio" ||
+      item.label === "Reservas" ||
+      item.label === "Home" ||
+      item.label === "Bookings"
         ? "text-[#c00093]"
         : "text-[#16309e]"
     }`}
