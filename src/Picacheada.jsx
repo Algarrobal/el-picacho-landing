@@ -86,26 +86,34 @@ Este servicio require de reserva previa de 48 horas.`,
       ],
       sections: [
         {
-          title: "Cultural and historical tours",
-          text: "Take a guided walk through El Picacho’s history—from the days of the Montoneras to the democratic movement. Local stories bring each corner to life.",
+          title: "Cultural and historical visits",
+          text: "Begin your visit at the stone-carved portal and follow the Verbena path to the fountain plaza flanked by the chapel. From there, you'll glimpse the nearby Guadalquivir River, where the rocky Picacho rises beside the family cemetery.
+                Then, explore the old manor with its two courtyards and various spaces: the art gallery, the paleontology and archaeology rooms, and, upstairs, the President’s study. From the traditional oven in the second courtyard, continue to the Hidden Garden, and finally to the Santa Cruz de Lajas lookout, where you can enjoy a local refreshment while admiring the view of the Guadalquivir’s headwaters.
+
+                *If you wish to include a tasting of local pastries or salteñas during the tour, please indicate this when booking.",
           image: "/picacheada_historia.jpg",
           button: "Book Tour"
         },
         {
           title: "Guided walks through the botanical park",
-          text: "Discover native and exotic species in a botanical walk that awakens the senses. Learn how this unique garden was shaped over decades.",
+          text: "Discover the richness of the botanical surroundings at El Picacho. You'll encounter a variety of species, including millenary ginkgo bilobas, sweetgums, araucarias, and the so-called Jupiter trees, Japanese imperial conifers, camphor trees, and laurels from the Vatican Gardens — all coexisting with emblematic native trees like molles, churquis, and algarrobos.
+                Crossing the river, you'll experience a  walk through a preserved patch of original woodland. Along the way, you'll be surprised by Land Art installations that you can enjoy while sipping a natural local refreshment.
+
+                *If you wish to include a tasting of local pastries or salteñas during the tour, please indicate this when booking.",
           image: "/picacheada_botanico.jpg",
           button: "Book Walk"
         },
         {
           title: "Flavors of El Picacho",
-          text: "Dine where midday meals are steeped in history. Seasonal menus crafted with local produce are served in the manor’s shaded courtyard.",
+          text: "Cap off your visit with a menu rooted in history and nature, featuring traditional criollo dishes and grilled fish from the Pilcomayo River. The experience includes local drinks and refreshments, as well as wines and singanis from the President’s cellar.
+
+                This service requires a 48-hour advance reservation.",
           image: "/picacheada_sabores.jpg",
           button: "Book Lunch"
         },
         {
           title: "Gatherings and Celebrations",
-          text: "Celebrate special moments in a historic setting. This space is available for family gatherings, intimate weddings, and cultural events, with options for guided walks, live music, and tastings.",
+          text: "Celebrate meaningful moments in a setting full of history and nature. This space is available for family gatherings, intimate weddings, and cultural events — with the option to include guided tours, live music, and tastings suited to the occasion.",
           image: "/picacheada_encuentro.jpg",
           button: "Book Event"
         }
