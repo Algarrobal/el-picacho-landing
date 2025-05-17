@@ -123,7 +123,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
       >
 
 {/* Navigation */}
-<nav className="fixed top-0 left-0 right-0 bg-black bg-opacity-15 backdrop-blur-md px-4 py-2 flex justify-between items-center z-50">
+<nav className="fixed top-0 left-0 right-0 px-4 py-2 flex justify-between items-center z-50">
   
   {/* Logo */}
   <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
@@ -184,7 +184,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
   </div>
 )}
 
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center pt-24 px-6">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">{t[lang].title}</h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
             {t[lang].subtitle}
