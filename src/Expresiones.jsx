@@ -6,7 +6,7 @@ export default function Expresiones() {
 
   const t = {
     es: {
-      title: "Expresiones de El Picacho",
+      title: "Rincones de El Picacho",
       toggle: "English",
       nav: [
         { label: "Inicio", link: "/" },
@@ -68,7 +68,7 @@ export default function Expresiones() {
       ]
     },
     en: {
-      title: "Expressions of El Picacho",
+      title: "Nooks of El Picacho",
       toggle: "Español",
       nav: [
         { label: "Home", link: "/" },
