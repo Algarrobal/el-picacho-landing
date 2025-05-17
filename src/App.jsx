@@ -42,6 +42,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         "Sabores de El Picacho - Donde el menú es con historia y naturaleza",
         "Lugar de Encuentro y Celebraciones"
       ],
+      moreButton: "Descubre Más Rincones de El Picacho",
       footer: "© El Picacho 2025 | Tarija, Bolivia"
     },
     en: {
@@ -78,6 +79,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
     "Flavors of El Picacho – Where the menu blends nature and tradition",
     "Gatherings and Celebrations"
   ],
+  moreButton: "Discover More of El Picacho",
   footer: "© El Picacho 2025 | Tarija, Bolivia"
 }
   };
@@ -237,7 +239,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
             href="/expresiones"
             className="min-h-tap inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
           >
-            Descubre Más Rincones de El Picacho
+            {t[lang].moreButton}
           </a>
         </div>
       </section>
