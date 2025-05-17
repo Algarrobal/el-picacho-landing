@@ -43,7 +43,43 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
         "Lugar de Encuentro y Celebraciones"
       ],
       footer: "© El Picacho 2025 | Tarija, Bolivia"
-    }
+    },
+    en: {
+  title: "El Picacho",
+  subtitle: "History, Nature, and Democracy",
+  subsubtitle: "in the South of Bolivia",
+  tagline: "An 1800s manor house in a botanical sanctuary\nabove the upper basin of the Guadalquivir River.",
+  historyTitle: (
+    <>
+      A <span className="text-[#c00093]">Land</span> Steeped in History
+    </>
+  ),
+  historyText: `A place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor house. In the 21st century, the Paz Zamora family settled here, committed to resisting military coups and building Bolivian democracy. With an ecological vision, they began developing the botanical park.
+
+The manor, surrounded by cypresses, stands atop a gorge carved by the river. In its waters rises a rock shaped like a peak, long known by locals as “El Picacho,” a name that eventually designated the entire site. El Picacho is a “Salamanca”—a name given to river-worn caves that, according to local myth, house spirits or devils. The settlement dates back to the late colonial period. At the entrance: a stone fountain, a hallway with heavy carob wood lintels, two courtyards, a chapel, a bell tower, and a twin-mouth mill. Its luminous white walls, indigo windows, and ochre-tiled roof reflect a blend of tradition and time.
+
+In today’s Bolivia, El Picacho embodies national identity and history—from the colonial era, through independence and the republic, to the continuing construction of democracy.`,
+  botanicTitle: (
+    <>
+      <span className="text-[#c00093]">Botanical</span> Park: Biological Unity in Diversity
+    </>
+  ),
+  botanicText: `The garden is a biological mestizaje. Native species thrive alongside others brought from distant microclimates. Churquis, algarrobos, tipas, chañares, and toborochis coexist with Mediterranean cypresses, Japanese conifers, Patagonian araucarias, American and European oaks, sweetgums from the northern hemisphere, tulip poplars, and Asian ginkgo bilobas.
+
+The ginkgo biloba is especially remarkable—an ancient species known as a living fossil. One specimen famously survived just a few hundred meters from the epicenter of the Hiroshima atomic bombing.`,
+  visitTitle: (
+    <>
+      Plan Your <span className="text-[#c00093]">Visit</span>
+    </>
+  ),
+  offerings: [
+    "Cultural and historical tours",
+    "Guided walks through the botanical park",
+    "Flavors of El Picacho – Where the menu blends nature and tradition",
+    "Gatherings and Celebrations"
+  ],
+  footer: "© El Picacho 2025 | Tarija, Bolivia"
+}
   };
 
   const navItems = [
@@ -125,27 +161,27 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
 )}
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">{t.es.title}</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">{t[lang].title}</h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
-            {t.es.subtitle}
+            {t[lang].subtitle}
           </h2>
           <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-2">
-            {t.es.subsubtitle}
+            {t[lang].subsubtitle}
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-white whitespace-pre-line mt-2 sm:mt-4">
-            {t.es.tagline}
+            {t[lang].tagline}
           </p>
         </div>
       </div>
 
       <section id="historia" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#16309e]">{t.es.historyTitle}</h2>
-        <p className="text-base sm:text-lg whitespace-pre-line leading-relaxed">{t.es.historyText}</p>
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].historyTitle}</h2>
+        <p className="text-base sm:text-lg whitespace-pre-line leading-relaxed">{t[lang].historyText}</p>
       </section>
 
       <section id="botanico" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#16309e]">{t.es.botanicTitle}</h2>
-        <p className="text-base sm:text-lg mb-6 whitespace-pre-line leading-relaxed">{t.es.botanicText}</p>
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#16309e]">{t[lang].botanicTitle}</h2>
+        <p className="text-base sm:text-lg mb-6 whitespace-pre-line leading-relaxed">{t[lang].botanicText}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
          {images.map((src, i) => (
             <img
@@ -182,9 +218,9 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       </section>
 
       <section id="visitanos" className="px-4 sm:px-6 md:px-16 py-12 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-[#16309e]">{t.es.visitTitle}</h2>
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-[#16309e]">{t[lang].visitTitle}</h2>
         <ul className="list-disc marker:text-[#c00093] ml-6 space-y-4 text-lg mb-10">
-          {t.es.offerings.map((item, idx) => (
+          {t[lang].offerings.map((item, idx) => (
             <li key={idx} className="pl-1">
               <a
                 href="/picacheada"
@@ -207,7 +243,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
       </section>
 
       <footer className="bg-gray-800 text-white text-center py-6">
-        {t.es.footer}
+        {t[lang].footer}
       </footer>
     </div>
   );
