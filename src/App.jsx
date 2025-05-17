@@ -118,12 +118,13 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
   return (
     <div className="font-sans text-[#3e484a]">
       <div
-        className="relative h-screen bg-cover bg-center"
+        className="relative h-screen bg-cover bg-center pt-20"
         style={{ backgroundImage: 'url("/hero-fachada-picacho-web.jpg")' }}
       >
 
 {/* Navigation */}
-<nav className="absolute top-4 left-4 right-4 flex justify-between items-center z-50">
+<nav className="fixed top-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur-md px-4 py-2 flex justify-between items-center z-50">
+  
   {/* Logo */}
   <a href="/" className="text-white text-xl md:text-2xl font-bold hover:opacity-90 transition">
     El Picacho
