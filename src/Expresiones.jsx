@@ -93,7 +93,7 @@ export default function Expresiones() {
           id: "pinacoteca",
           title: (
             <>
-              The <span className="text-[#c00093]">La Pinacoteca</span>
+              <span className="text-[#c00093]">La Pinacoteca</span>
             </>
           ),
           text: `Features paintings on natural materials, oils and watercolors, pencil sketches from colonial times to the present: Pérez de Holguín – Zurbarán, and contemporary masters such as the Ecuadorian Oswaldo Guayasamín and Bolivians Raúl Lara, Ricardo Pérez Alcalá, Gil Coimbra, Gilgaro Antezana, Gil Imaná, Gastón Ugalde, among others.`
