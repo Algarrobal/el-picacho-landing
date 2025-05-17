@@ -153,14 +153,21 @@ This service requires a 48-hour advance reservation.`,
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-sm md:text-base">
-          {t[lang].nav.map((item, idx) => (
-            <li key={idx}>
-              <a href={item.link} className="text-[#16309e] hover:underline">
-                {item.label}
-              </a>
-            </li>
-          ))}
+       <ul className="hidden md:flex items-center gap-6 text-sm md:text-base">
+  {t[lang].nav.map((item, idx) => (
+    <li key={idx}>
+      <a
+        href={item.link}
+        className={`hover:underline ${
+          item.label === "Inicio" || item.label === "Rincones" || item.label === "Home" || item.label === "Nooks"
+            ? "text-[#c00093]"
+            : "text-[#16309e]"
+        }`}
+      >
+        {item.label}
+      </a>
+    </li>
+  ))}
           <li>
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
@@ -182,19 +189,23 @@ This service requires a 48-hour advance reservation.`,
       </div>
 
       {/* Mobile Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden mb-8 text-sm bg-white border rounded shadow px-4 py-3 space-y-2">
-          {t[lang].nav.map((item, idx) => (
-            <div key={idx}>
-              <a
-                href={item.link}
-                className="block text-[#16309e] hover:underline"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            </div>
-          ))}
+     {isMobileMenuOpen && (
+  <div className="md:hidden mb-8 text-sm bg-white border rounded shadow px-4 py-3 space-y-2">
+    {t[lang].nav.map((item, idx) => (
+      <div key={idx}>
+        <a
+          href={item.link}
+          className={`block hover:underline ${
+            item.label === "Inicio" || item.label === "Rincones" || item.label === "Home" || item.label === "Nooks"
+              ? "text-[#c00093]"
+              : "text-[#16309e]"
+          }`}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {item.label}
+        </a>
+      </div>
+    ))}
           <button
             onClick={() => {
               setLang(lang === "es" ? "en" : "es");
