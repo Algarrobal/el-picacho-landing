@@ -125,9 +125,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
 )}
 
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-6">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-2 sm:mb-4">
-            {t.es.title}
-          </h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">{t.es.title}</h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
             {t.es.subtitle}
           </h2>
