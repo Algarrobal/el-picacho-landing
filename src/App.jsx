@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "react-modal";
+import { useEffect } from "react";
 
 Modal.setAppElement("#root");
 
@@ -8,7 +9,17 @@ export default function ElPicachoLanding() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); 
 
-  
+  useEffect(() => {
+  const handleScroll = () => {
+    if (isMobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [isMobileMenuOpen]);
+
   const t = {
     es: {
       title: "El Picacho",
