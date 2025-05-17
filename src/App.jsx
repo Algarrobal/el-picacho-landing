@@ -167,7 +167,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
           <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-1 sm:mb-2">
             {t[lang].subtitle}
           </h2>
-          <h3 className="text-2xl md:text-3xl text-white mb-2">
+          <h3 className="text-xl sm:text-2xl md:text-3xl text-white mb-2">
             {t[lang].subsubtitle}
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-white whitespace-pre-line mt-2 sm:mt-4">
