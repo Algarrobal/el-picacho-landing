@@ -93,10 +93,10 @@ export default function Expresiones() {
           id: "pinacoteca",
           title: (
             <>
-              The <span className="text-[#c00093]">Art Gallery</span>
+              The <span className="text-[#c00093]">La Pinacoteca</span>
             </>
           ),
-          text: `Upstairs in the manor house, the former library was transformed into an art gallery. It displays family portraits, works by contemporary Bolivian artists, and prints by Durero, Goya, and Miró. The collection reflects the family’s history and cultural affinities.`
+          text: `Features paintings on natural materials, oils and watercolors, pencil sketches from colonial times to the present: Pérez de Holguín – Zurbarán, and contemporary masters such as the Ecuadorian Oswaldo Guayasamín and Bolivians Raúl Lara, Ricardo Pérez Alcalá, Gil Coimbra, Gilgaro Antezana, Gil Imaná, Gastón Ugalde, among others.`
         },
         {
           id: "fosiles",
@@ -105,25 +105,26 @@ export default function Expresiones() {
               Paleontology <span className="text-[#c00093]">&</span> Fossils
             </>
           ),
-          text: `A small room off the first courtyard houses fossils found in the region: ammonites, megafauna remains, and petrified footprints. These tell the deep-time story of Tarija—once submerged or trodden by prehistoric creatures.`
+          text: `Specimens include tusks and molars from the mammoths that roamed the Tarija valley during the Pleistocene–Ordovician era, alongside fossils from Antarctica, Morocco, Germany, and other parts of the world.`
         },
         {
           id: "arqueologia",
           title: (
             <>
-              Indigenous <span className="text-[#c00093]">Archaeology</span>
+              Native <span className="text-[#c00093]">Archaeology</span>
             </>
           ),
-          text: `In the second courtyard and interior alcoves, visitors find ceramics, tools, and textiles from the region’s original peoples—Tomatas, Churumatas, and others who lived here before the colonial period.`
+          text: `Ceremonial vessels from the Aymara and Quechua peoples, goldsmithing, ceremonial staffs, and carved stone pieces from Indigenous cultures.`
         },
         {
           id: "canteria",
           title: (
             <>
-              <span className="text-[#c00093]">Stonework</span> Sculptures
+              <span className="text-[#c00093]">Stonework</span>
             </>
           ),
-          text: `Throughout El Picacho, stone carvings mark key spaces—the entryway, the chapel, the central plaza, and the Santa Cruz de Lajas. Many were made by local or visiting artisans and carry symbolic, spiritual, or territorial meaning.`
+          text: `Notably, the mestizo baroque works of master Valentín Montealegre in comanche stone and of master Tito in river-washed stone, as well as the main fountain of El Picacho, sculpted by stonemasons from Chuquisaca. The manor is watched over by a San Miguel Archangel carved in pink stone from Potosí by an anonymous artist, alongside a water spout mask of unknown origin that faces the entrance.
+Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall by an unnamed sculptor…`
         }
       ]
     }
