@@ -34,7 +34,7 @@ export default function Expresiones() {
               La <span className="text-[#c00093]">Pinacoteca</span> Familiar
             </>
           ),
-          text: `En la planta alta de la casona, la antigua biblioteca fue transformada en pinacoteca. Allí cuelgan retratos familiares, obras de artistas bolivianos contemporáneos y grabados de autores como Durero, Goya y Miró. La selección dialoga con la historia familiar y los intereses culturales de sus moradores.`
+          text: `Se puede apreciar en ella pinturas en elementos naturales, oleo y acuarela, diseños en lápiz desde la colonia hasta hoy: Pérez de Holguín - Zulbaran, y maestros contemporáneos como el ecuatoriano Oswaldo Guayasamín y los bolivianos Raul Lara, Ricardo Perez Alcalá, Gil Coimbra, Gilgaro Antezana, Gil Imaná, Gaston Ugalde, entre otros…`
         },
         {
           id: "fosiles",
@@ -43,7 +43,7 @@ export default function Expresiones() {
               Paleontología <span className="text-[#c00093]">y</span> Fósiles
             </>
           ),
-          text: `En el primer patio, un espacio íntimo alberga piezas fósiles recolectadas en la región: ammonites, restos de megafauna y huellas petrificadas que cuentan la historia geológica de Tarija. La colección permite imaginar un Picacho remoto, cubierto por mares o frecuentado por gliptodontes.`
+          text: `Piezas como colmillos, y muelas de los mamut que habitaron el valle de Tarija en el pleistoceno - ordovícico junto a fósiles locales de la Antártida, Marruecos, Alemania y de otros lugares.`
         },
         {
           id: "arqueologia",
@@ -52,7 +52,7 @@ export default function Expresiones() {
               <span className="text-[#c00093]">Arqueología</span> Originaria
             </>
           ),
-          text: `En el interior de la casona y en espacios del segundo patio se presentan piezas de alfarería, herramientas y textiles recolectados en Tarija y sus valles. Son testimonios de los pueblos originarios que habitaron esta tierra antes de la colonia, como los tomatas y churumatas.`
+          text: `Vasos ceremoniales Aymara, Quechuas, orfebrería, bastones de mando y piezas en piedra de culturas originarias.`
         },
         {
           id: "canteria",
@@ -61,7 +61,9 @@ export default function Expresiones() {
               Obras de <span className="text-[#c00093]">Cantería</span>
             </>
           ),
-          text: `En el Picacho hay numerosas esculturas en piedra, muchas talladas in situ por artesanos locales o visitantes. Las más destacadas acompañan los accesos: el portal, la plazoleta de la fuente, la capilla, y la Santa Cruz de Lajas. Cada una tiene un simbolismo espiritual o territorial.`
+          text: `Particularmente del barroco mestizo del maestro Valentín Montealegre en piedra comanche y del maestro Tito, en piedra lavada de rio, así como la fuente principal del Picacho, labrada por canteros chuquisaqueños. Custodia la casona, un San Miguel Arcángel en piedra rosácea Potosina de autor anónimo, junto a un mascarón de autor anónimo de canaletas que mira hacia la entrada. 
+
+                 Río arriba en el mirador la Santa Cruz de Lajas tallada en tres metros de altura por nombre de autor…`
         }
       ]
     },
