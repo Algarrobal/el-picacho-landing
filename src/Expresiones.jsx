@@ -133,7 +133,7 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
   return (
     <div className="font-sans min-h-screen bg-white text-[#3e484a] px-4 sm:px-6 md:px-16 py-8 md:py-16">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8 relative z-50">
+      <div className="flex justify-between items-center mb-12 relative z-50">
         <a href="/" className="text-xl md:text-2xl font-bold text-[#16309e] hover:underline">
           El Picacho
         </a>
