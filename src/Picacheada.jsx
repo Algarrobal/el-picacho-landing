@@ -12,8 +12,9 @@ export default function Picacheada() {
         </>
       ),
       toggle: "English",
-      nav: [
+     nav: [
         { label: "Inicio", link: "/" },
+        { label: "Rincones", link: "/expresiones" },
         { label: "Cultura e Historia", link: "#historia" },
         { label: "El Botánico", link: "#botanico" },
         { label: "Sabores del Picacho", link: "#sabores" },
@@ -77,8 +78,9 @@ Este servicio require de reserva previa de 48 horas.`,
     en: {
       title: "Arrange Your Visit",
       toggle: "Español",
-      nav: [
+     nav: [
         { label: "Home", link: "/" },
+        { label: "Nooks", link: "/expresiones" },
         { label: "Culture & History", link: "#historia" },
         { label: "Botanical Walk", link: "#botanico" },
         { label: "Flavors of El Picacho", link: "#sabores" },
