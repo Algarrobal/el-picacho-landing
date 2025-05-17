@@ -96,7 +96,6 @@ text: `Begin your visit at the stone-carved portal and follow the Verbena path t
 Then, explore the old manor with its two courtyards and various spaces: the art gallery, the paleontology and archaeology rooms, and, upstairs, the President’s study. From the traditional oven in the second courtyard, continue to the Hidden Garden, and finally to the Santa Cruz de Lajas lookout, where you can enjoy a local refreshment while admiring the view of the Guadalquivir’s headwaters.
 
 *If you wish to include a tasting of local pastries or salteñas during the tour, please indicate this when booking.`
-please please 
           image: "/picacheada_historia.jpg",
           button: "Book Tour"
         },
