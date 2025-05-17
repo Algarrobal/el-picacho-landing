@@ -181,7 +181,7 @@ Este servicio require de reserva previa de 48 horas.`,
 
       {/* Section Cards */}
       {t[lang].sections.map((section, i) => (
-        <div key={i} id={section.id} className="mb-20 scroll-mt-24 flex flex-col md:flex-row gap-8 items-start md:items-center">
+        <div key={i} id={section.id} className="mb-20 scroll-mt-24 flex flex-col md:flex-row gap-8 md:items-start items-center">
           <img
             src={section.image}
             alt={section.title}
