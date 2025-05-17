@@ -97,7 +97,7 @@ Then, explore the old manor with its two courtyards and various spaces: the art 
 
 *If you wish to include a tasting of local pastries or salteñas during the tour, please indicate this when booking.`,
           image: "/picacheada_historia.jpg",
-          button: "Book Tour"
+          button: "Book Visit"
         },
         {
   id: "botanico",
