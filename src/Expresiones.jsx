@@ -199,8 +199,13 @@ Upstream at the lookout stands the Santa Cruz de Lajas, carved three meters tall
       </div>
 
       {/* Page Title */}
-      <h1 className="text-3xl md:text-5xl font-bold text-[#16309e] mb-12 text-center">
-        {t[lang].title}
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-16">
+        <span className="text-[#c00093]">
+          {lang === "es" ? "Rincones" : "Nooks"}
+        </span>{" "}
+        <span className="text-[#16309e]">
+          {lang === "es" ? "de El Picacho" : "of El Picacho"}
+        </span>
       </h1>
 
       {/* Sections */}
