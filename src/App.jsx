@@ -68,7 +68,7 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
   tagline: "An 1800s manor house in a botanical sanctuary\nabove the upper basin of the Guadalquivir River.",
   historyTitle: (
     <>
-      A <span className="text-[#c00093]">Land</span> Steeped in History
+      A <span className="text-[#c00093]">Terruño</span> Steeped in History
     </>
   ),
   historyText: `A place where the libertarian “Montoneras” fought, led by the patriot Eustaquio “Moto” Méndez, a member of the Méndez Arenas family—the first inhabitants of the manor house. In the 21st century, the Paz Zamora family settled here, committed to resisting military coups and building Bolivian democracy. With an ecological vision, they began developing the botanical park.
