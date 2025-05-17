@@ -138,7 +138,7 @@ export default function Expresiones() {
             <li key={idx}>
               <a
                 href={item.link}
-                className={`hover:border-b-2 border-current pb-1 transition ${
+                className={`hover:border-b-2 border-current pb-1 transition px-2 py-2 sm:py-1 ${
                   item.color ? "text-[#c00093]" : "text-[#16309e]"
                 }`}
               >
@@ -149,7 +149,7 @@ export default function Expresiones() {
           <li>
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
-              className="border border-[#16309e] px-4 py-1 rounded hover:bg-[#16309e] hover:text-white transition"
+              className="border border-[#16309e] px-4 py-2 sm:py-1 rounded hover:bg-[#16309e] hover:text-white transition"
             >
               {t[lang].toggle}
             </button>
@@ -181,7 +181,7 @@ export default function Expresiones() {
       <div className="text-center mt-16 pb-12">
         <a
           href="/"
-          className="inline-block px-6 py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
+          className="inline-block px-6 py-3 sm:py-2 text-base md:text-lg text-[#c00093] border border-[#c00093] rounded hover:bg-[#c00093] hover:text-white transition"
         >
           ← {lang === "es" ? "Volver al Inicio" : "Back to Home"}
         </a>
