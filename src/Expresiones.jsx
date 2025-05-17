@@ -133,7 +133,7 @@ export default function Expresiones() {
         <a href="/" className="text-xl md:text-2xl font-bold text-[#16309e] hover:underline">
           El Picacho
         </a>
-        <ul <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm sm:text-base">
+        <ul className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm sm:text-base">
           {t[lang].nav.map((item, idx) => (
             <li key={idx}>
               <a
