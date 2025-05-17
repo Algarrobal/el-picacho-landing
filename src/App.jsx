@@ -14,6 +14,14 @@ export default function ElPicachoLanding() {
       title: "El Picacho",
       subtitle: "Historia, Naturaleza y Democracia",
       subsubtitle: "en el Sur de Bolivia",
+      toggle: "English",
+          nav: [
+      { label: "Historia", href: "#historia" },
+      { label: "Botánico", href: "#botanico" },
+      { label: "Visítanos", href: "#visitanos" },
+      { label: "Rincones", href: "/expresiones" },
+      { label: "Reservas", href: "/picacheada" }
+    ],
       tagline: "Una casona del 1800 en un parque botánico sobre\nla cuenca alta del río Guadalquivir.",
       historyTitle: (
         <>
@@ -49,6 +57,14 @@ En la Bolivia de hoy El Picacho expresa identidad e historia nacionales, desde l
   title: "El Picacho",
   subtitle: "History, Nature, and Democracy",
   subsubtitle: "in the South of Bolivia",
+  toggle: "Español",
+  nav: [
+  { label: "History", href: "#historia" },
+  { label: "Botanical", href: "#botanico" },
+  { label: "Visit Us", href: "#visitanos" },
+  { label: "Nooks", href: "/expresiones" },
+  { label: "Bookings", href: "/picacheada" }
+],
   tagline: "An 1800s manor house in a botanical sanctuary\nabove the upper basin of the Guadalquivir River.",
   historyTitle: (
     <>
@@ -84,13 +100,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
 }
   };
 
-  const navItems = [
-    { label: "Historia", href: "#historia" },
-    { label: "Botánico", href: "#botanico" },
-    { label: "Visítanos", href: "#visitanos" },
-    { label: "Rincones", href: "/expresiones" },
-    { label: "Reservas", href: "/picacheada" }
-  ];
+  const navItems = t[lang].nav;
 
   const images = Array.from({ length: 15 }, (_, i) => `mosaico_${String(i + 1).padStart(2, "0")}.jpg`);
 
@@ -122,7 +132,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
         onClick={() => setLang(lang => (lang === "es" ? "en" : "es"))}
         className="min-h-tap px-4 py-1 border border-white rounded hover:bg-white hover:text-black transition"
       >
-        English
+        {t[lang].toggle}
       </button>
     </li>
   </ul>
@@ -157,7 +167,7 @@ The ginkgo biloba is especially remarkable—an ancient species known as a livin
       }}
       className="block w-full text-left border border-[#16309e] px-3 py-2 rounded hover:bg-[#16309e] hover:text-white transition"
     >
-      English
+      {t[lang].toggle}
     </button>
   </div>
 )}
